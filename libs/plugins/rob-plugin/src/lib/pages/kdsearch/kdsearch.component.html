@@ -1,1 +1,47 @@
-new kdsearch page!!!!!
+<div id="body">
+  <ng-container *ngFor="let message of messages">
+    <div
+      class="message"
+      [ngClass]="{
+        from: message.author === 'bot',
+        to: message.author === 'user'
+      }"
+    >
+      {{ message.content }}
+    </div>
+  </ng-container>
+  <!--   <label *ngIf="messages.length === 0; else dialogInfo" for="nameField"
+    >Your message</label
+  > -->
+  <!--   <input
+    matInput
+    [(ngModel)]="value"
+    (keyup.enter)="sendMessage()"
+    type="text"
+  /> -->
+  <div style="margin: auto">
+    <mat-form-field class="example-form-field" appearance="fill">
+      <mat-label>Enter your search prompt here</mat-label>
+      <input
+        matInput
+        type="text"
+        [(ngModel)]="value"
+        (keyup.enter)="sendMessage()"
+      />
+      <button
+        *ngIf="value"
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        (click)="value = ''"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <ng-template #dialogInfo>
+      <span [className]="'float-right'"
+        >Total messages: {{ messages.length }}</span
+      >
+    </ng-template>
+  </div>
+</div>
