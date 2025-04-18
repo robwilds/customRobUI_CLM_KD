@@ -1,0 +1,116 @@
+@use 'idp-colors' as colors;
+@use 'mat-selectors' as ms;
+
+#metadata-container {
+    --metadata-extraction-icon-size: 10px;
+
+    height: calc(100% - 8px);
+    padding: 0.1em 0.4em;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+
+    .idp-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-bottom: 0.1em solid map-get(colors.$hy-neutral, 50);
+
+        .idp-spacer {
+            flex: 1;
+        }
+        .idp-reject-document {
+            display: flex;
+            padding: 0.5em;
+            margin-right: 14px;
+            font-size: 14px;
+            font-weight: normal;
+            flex-direction: row;
+            vertical-align: middle;
+
+            /* Seems like align-items ought to be middle, but end aligns the icon more nicely with the text. */
+            align-items: flex-end;
+            color: map-get(colors.$hy-primary, 500);
+            cursor: pointer;
+
+            &-icon {
+                font-size: 18px;
+                padding-left: 4px;
+            }
+        }
+    }
+
+    .idp-title {
+        font-size: 25px;
+        font-weight: normal;
+        line-height: 35px;
+        width: 30%;
+        margin: 0;
+        padding-left: 14px;
+        padding-top: 0.2em;
+    }
+
+    form {
+        flex: 1;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-left: 5px;
+        padding-right: 10px;
+
+        #{ms.$mat-form-field} {
+            margin-bottom: -1em;
+            #{ms.$mdc-text-field--filled}:not(#{ms.$mdc-text-field--disabled}) #{ms.$mat-form-field-underline}::after {
+                border-bottom-color: map-get(colors.$hy-neutral, 1000);
+            }
+        }
+
+        .idp-fields-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 19.2px;
+            max-width: 600px;
+
+            .idp-form-field {
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+
+                &-label {
+                    font-size: 14pt;
+                    font-weight: 600;
+                    overflow-wrap: break-word;
+                    color: map-get(colors.$hy-neutral, 600);
+                }
+                &.idp-has-issue {
+                    .idp-form-field-label {
+                        color: map-get(colors.$hy-warn, 600);
+                    }
+                }
+                &.idp-is-selected {
+                    background-color: map-get(colors.$hy-primary, 200);
+                    border-radius: 0.5em;
+                }
+                &.idp-has-issue.idp-is-selected {
+                    background-color: map-get(colors.$hy-warn, 50);
+                }
+                &-input {
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    border: 0;
+                    font-size: 14px;
+                }
+            }
+
+            .idp-extraction-result {
+                margin-left: 8px;
+            }
+
+            .idp-validation-error {
+                color: map-get(colors.$hy-warn, 600);
+                margin-left: 10px;
+                font-weight: 600;
+                font-size: 11px;
+            }
+        }
+    }
+}

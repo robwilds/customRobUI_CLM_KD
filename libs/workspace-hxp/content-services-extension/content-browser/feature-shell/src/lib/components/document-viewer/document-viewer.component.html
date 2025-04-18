@@ -1,0 +1,72 @@
+<hxp-ui-document-viewer
+    *ngIf="document"
+    [document]="document"
+    [showRightSidebar]="rightSidebarVisibility"
+    [fullScreen]="fullScreen"
+    (closeViewer)="onClose()"
+>
+    <ng-template #toolbar>
+        <mat-toolbar>
+            <adf-toolbar-title>
+                <button
+                    id="document-viewer-close-button"
+                    mat-icon-button
+                    data-automation-id="document-viewer-toolbar-close"
+                    [attr.aria-label]="'ADF_VIEWER.ACTIONS.CLOSE' | translate"
+                    title="{{ 'ADF_VIEWER.ACTIONS.CLOSE' | translate }}"
+                    [matTooltip]="'ADF_VIEWER.ACTIONS.CLOSE' | translate"
+                    (click)="onClose()"
+                >
+                    <mat-icon>arrow_back</mat-icon>
+                </button>
+                <hxp-breadcrumb [document]="document" />
+                <hxp-document-version-selector [actionContext]="actionContext" />
+            </adf-toolbar-title>
+            <div id="document-viewer-custom-actions">
+                <hxp-content-properties-viewer-button [actionContext]="actionContext" />
+                <hxp-content-delete [actionContext]="actionContext" />
+                <hxp-single-item-download [actionContext]="actionContext" />
+                <hxp-single-file-share [actionContext]="actionContext" />
+            </div>
+
+            <adf-toolbar-divider />
+
+            <button
+                id="document-viewer-fullscreen"
+                mat-icon-button
+                [attr.aria-label]="'ADF_VIEWER.ACTIONS.FULLSCREEN' | translate"
+                title="{{ 'ADF_VIEWER.ACTIONS.FULLSCREEN' | translate }}"
+                [matTooltip]="'ADF_VIEWER.ACTIONS.FULLSCREEN' | translate"
+                data-automation-id="document-toolbar-fullscreen"
+                (click)="enterFullScreen()"
+            >
+                <mat-icon>fullscreen</mat-icon>
+            </button>
+
+            <adf-toolbar-divider />
+
+            <hxp-document-more-action [actionContext]="actionContext" [menuItems]="(moreMenu$ | async)!" />
+        </mat-toolbar>
+    </ng-template>
+    <ng-template #sidebar>
+        <ng-container [ngSwitch]="rightSidebarPanelType">
+            <hxp-properties-sidebar
+                *ngSwitchCase="'properties'"
+                [document]="document"
+                [editable]="editablePropertiesSidebar"
+                (closePropertySidebar)="closeRightSidebarPanel('properties')" />
+
+            <hxp-permissions-management-panel
+                *ngSwitchCase="'permissions'"
+                [document]="document"
+                [parentDocument]="actionContext.parentDocument" />
+
+            <hxp-manage-versions-sidebar
+                *ngSwitchCase="'versions'"
+                [document]="document"
+                (closeVersionsSidebar)="closeRightSidebarPanel('versions')" />
+
+            <div *ngSwitchDefault></div>
+        </ng-container>
+    </ng-template>
+</hxp-ui-document-viewer>

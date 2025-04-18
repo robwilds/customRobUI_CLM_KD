@@ -1,0 +1,45 @@
+{
+    "EXTRACTION": {
+        "VERIFICATION": {
+            "TASK_HEADER": {
+                "TITLE": "Vérifier les valeurs de champs extraites du document",
+                "REMAINING_ISSUES": "problèmes à résoudre",
+                "ALL_RESOLVED": "Tous résolus",
+                "BACK_LABEL": "Retourner aux tâches",
+                "TASK_NAME": "Nom de la tâche",
+                "TASK_NAME_VALUE": "Vérification du document",
+                "DOCUMENT_CLASSES": "Classes de documents",
+                "TOTAL_DOCUMENTS": "Nombre total de documents",
+                "TOTAL_PAGES": "Nombre total de pages",
+                "CONTENT_TYPE": "Type de contenu"
+            },
+            "SUBMIT_BUTTON": "Envoyer",
+            "SUBMIT_WITH_ISSUE_BUTTON": "Envoyer avec problème",
+            "METADATA_PANEL": {
+                "TITLE": "Métadonnées",
+                "REJECT_DOCUMENT_LINK": "Rejeter le document",
+                "CLEAR_ISSUE_LINK": "Supprimer le problème"
+            },
+            "METADATA_FIELD_VALIDATOR": {
+                "REQUIRED": "Le champ est obligatoire",
+                "INVALID_INTEGER": "Le champ doit être un nombre"
+            },
+            "EXTRACTION_RESULT": {
+                "EXTRACTION_ISSUE": "Problème d'extraction",
+                "EXTRACTED_SUCCESSFULLY": "Extraction réussie",
+                "VERIFIED": "Vérifié",
+                "NOT_VERIFIED": "Non vérifié"
+            },
+            "NOTIFICATIONS": {
+                "SCREEN_LOAD_ERROR": "Échec du chargement des données de l’écran",
+                "TASK_ACTION_ERROR": "Impossible d’enregistrer ou d’envoyer la tâche",
+                "TASK_CLAIM_ERROR": "Échec de la réclamation de la tâche",
+                "TASK_UNCLAIM_ERROR": "Échec de la non-réclamation de la tâche"
+            },
+            "TASK_ACTIONS": {
+                "SAVE": "Enregistrer",
+                "SUBMIT": "Soumettre"
+            }
+        }
+    }
+}

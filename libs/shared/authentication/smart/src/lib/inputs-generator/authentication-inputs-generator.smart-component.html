@@ -1,0 +1,38 @@
+<ng-container *ngIf="authFormGroup" [formGroup]="authFormGroup">
+    <ng-container [formGroupName]="authentication.getAuthKey()">
+        <div class="apa-generator-inputs-container">
+            <mat-form-field [appearance]="appearance"
+                            *ngFor="let field of authenticationCredentialsFields"
+                            [attr.data-automation-id]="getAutomationId(field.key)">
+                <mat-label>{{ field.translationKey | translate }}</mat-label>
+                <input matInput
+                       [attr.data-automation-id]="'apa-authentication-input-' + field.key"
+                       [placeholder]="field.translationKey | translate"
+                       [type]="getFieldType(field)"
+                       [formControl]="getInputFormControl(field.key)"/>
+                <mat-hint *ngIf="field?.hint"
+                          [attr.data-automation-id]="'apa-authentication-field-hint-' + field.key">
+                    {{ field.hint | translate }}
+                </mat-hint>
+                <button *ngIf="field?.type === 'password'"
+                        mat-icon-button
+                        matSuffix
+                        [attr.aria-label]="'SHARED_AUTHENTICATION.HINTS.HIDE_PASSWORD' | translate"
+                        [attr.data-automation-id]="'apa-authentication-visibility-toggle-button-' + field.key"
+                        (click)="togglePass(field)">
+                    <mat-icon [attr.data-automation-id]="'apa-authentication-visibility-toggle-icon-' + field.key">
+                        {{ field?.isHidden ? 'visibility_off' : 'visibility' }}
+                    </mat-icon>
+                </button>
+                <mat-error *ngIf="hasRequiredError(field.key)"
+                           [attr.data-automation-id]="'apa-authentication-field-required-error-' + field.key">
+                    {{ 'SHARED_AUTHENTICATION.ERRORS.REQUIRED' | translate }}
+                </mat-error>
+                <mat-error *ngIf="hasPatternError(field.key)"
+                           [attr.data-automation-id]="'apa-authentication-field-pattern-error-' + field.key">
+                    {{ getPatternErrorTranslationKey(field.key) | translate }}
+                </mat-error>
+            </mat-form-field>
+        </div>
+    </ng-container>
+</ng-container>

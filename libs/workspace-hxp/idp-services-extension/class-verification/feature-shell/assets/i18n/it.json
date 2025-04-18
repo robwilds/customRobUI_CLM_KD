@@ -1,0 +1,123 @@
+{
+    "IDP_CLASS_VERIFICATION": {
+        "TASK_HEADER": {
+            "TITLE": "Rivedi i documenti nel lotto",
+            "REMAINING_ISSUES": "problemi da risolvere",
+            "ALL_RESOLVED": "Tutti risolti",
+            "BACK_LABEL": "Torna ai compiti",
+            "TASK_NAME": "Nome compito",
+            "TASK_NAME_VALUE": "Verifica batch",
+            "DOCUMENT_CLASSES": "Classi documento",
+            "TOTAL_DOCUMENTS": "Totale documenti",
+            "TOTAL_PAGES": "Pagine totali"
+        },
+        "VIEWER": {
+            "TOOLBAR": {
+                "ASSIGN_DOCUMENT_CLASS": "Assegna classe documento",
+                "ISSUE_LABEL": "Problema potenziale: ",
+                "REJECT_LABEL": "Rifiuta",
+                "RESOLVE_LABEL": "Contrassegna come risolto"
+            },
+            "EMPTY_VIEW": {
+                "DONE_TITLE": "HAI FINITO!",
+                "DONE_DESCRIPTION": "È ora possibile inviare il compito",
+                "SELECT_DOCUMENT": "Seleziona un documento"
+            },
+            "STICKY_ACTION": {
+                "OPEN_SHORTCUT_BROWSER_BUTTON_TOOLTIP": "Apri browser collegamenti"
+            }
+        },
+        "CLASS_LIST_HEADER": {
+            "SHOW_ISSUES_LABEL": "Mostra solo problemi",
+            "SHOW_ISSUES_TOOLTIP": "Mostra solo problemi"
+        },
+        "FLOATING_TOOLBAR": {
+            "EXPAND_BUTTON_TOOLTIP": "Espandi barra degli strumenti",
+            "COLLAPSE_BUTTON_TOOLTIP": "Comprimi barra degli strumenti"
+        },
+        "DOCUMENT_TOOLBAR": {
+            "UNDO": "Annulla",
+            "REDO": "Ripeti",
+            "CHANGE_CLASS": "Cambia classe",
+            "SPLIT": "Dividi",
+            "MERGE": "Unisci",
+            "DELETE": "Elimina",
+            "REJECT": "Rifiuta",
+            "MARK_RESOLVED": "Contrassegna come risolto"
+        },
+        "CLASS_CHANGE_DIALOG": {
+            "TITLE": "Cambia classe",
+            "SEARCH_PLACEHOLDER": "Cerca una classe...",
+            "CANCEL_BUTTON": "Annulla",
+            "SAVE_BUTTON": "Cambia classe"
+        },
+        "DELETE_CONFIRMATION_DIALOG": {
+            "TITLE": "Conferma modifiche",
+            "DESCRIPTION": "Eliminare le pagine selezionate?",
+            "CANCEL_BUTTON": "Annulla",
+            "DELETE_BUTTON": "Elimina"
+        },
+        "SHORTCUTS": {
+            "SELECT_ALL_CONTEXT_ONLY": "Seleziona tutte le pagine o i documenti",
+            "SELECT_ALL": "Seleziona tutte le pagine e i documenti nella classe selezionata",
+            "SELECT_ALL_UNTIL_START_CONTEXT_ONLY": "Seleziona tutti gli elementi fino al primo elemento del tipo di elemento selezionato",
+            "SELECT_ALL_UNTIL_END_CONTEXT_ONLY": "Seleziona tutti gli elementi fino all'ultimo elemento del tipo di elemento selezionato",
+            "SELECT_ALL_UNTIL_START": "Seleziona tutti gli elementi fino al primo documento",
+            "SELECT_ALL_UNTIL_END": "Seleziona tutti gli elementi fino all'ultimo documento",
+            "NAVIGATE_FIRST": "Passa al primo documento",
+            "NAVIGATE_END": "Passa all'ultimo documento",
+            "NAVIGATE_FIRST_CONTEXT_ONLY": "Passa al primo elemento",
+            "NAVIGATE_END_CONTEXT_ONLY": "Passa all'ultimo elemento",
+            "NAVIGATE_SELECT_UP": "Continua la selezione dell’elemento precedente",
+            "NAVIGATE_SELECT_DOWN": "Continua la selezione dell'elemento successivo",
+            "NAVIGATE_UP": "Naviga verso l'alto",
+            "NAVIGATE_DOWN": "Naviga verso il basso",
+            "NAVIGATE_TOP_CONTEXT_ONLY": "Passa all'elemento più in alto",
+            "NAVIGATE_BOTTOM_CONTEXT_ONLY": "Passa all’elemento più in basso",
+            "COLLAPSE": "Comprimi in principale",
+            "NAVIGATE_PREV_CLASS": "Classe documento precedente",
+            "NAVIGATE_NEXT_CLASS": "Classe documento successiva",
+            "TOGGLE_EXPAND_COLLAPSE": "Attiva/disattiva lo stato di espansione/compressione dell'elemento selezionato",
+            "PAGE_SPLIT": "Dividi pagina",
+            "PAGE_SPLIT_ALL_ABOVE": "Dividi tutte le pagine precedenti",
+            "PAGE_MERGE": "Unisci pagina",
+            "PAGE_DELETE": "Elimina pagina",
+            "CHANGE_CLASS": "Modifica classe di documenti selezionati",
+            "ISSUE_ONLY_FILTER": "Attiva/Disattiva filtro solo problemi",
+            "UNDO": "Annulla ultima azione",
+            "REDO": "Ripeti ultima azione",
+            "DOCUMENT_REJECT": "Rifiuta documento"
+        },
+        "USER_FEEDBACK": {
+            "PAGE_DELETE_SUCCESS_SINGULAR": "Pagina {{arg}} eliminata",
+            "PAGE_DELETE_SUCCESS_PLURAL": "Pagine {{arg}} eliminate",
+            "PAGE_DELETE_ERROR": "Impossibile eliminare le pagine",
+            "CHANGE_CLASS_SUCCESS_SINGULAR": "Il documento selezionato è stato spostato nella classe documento {{className}}",
+            "CHANGE_CLASS_SUCCESS_PLURAL": "I documenti selezionati sono stati spostati nella classe documento {{className}}",
+            "CHANGE_CLASS_ERROR": "Impossibile spostare le pagine in un'altra classe",
+            "PAGE_SPLIT_SUCCESS_SINGULAR": "{{arg}} diviso correttamente",
+            "PAGE_SPLIT_SUCCESS_PLURAL": "Pagine {{arg}} divise correttamente",
+            "PAGE_SPLIT_ERROR": "Impossibile dividere le pagine",
+            "PAGE_MERGE_SUCCESS": "Le pagine {{pageCount}} sono state unite a {{documentName}} correttamente",
+            "PAGE_MERGE_ERROR": "Impossibile unire le pagine",
+            "MOVE_PAGE_SUCCESS_SINGULAR": "{{arg}} spostato correttamente",
+            "MOVE_PAGE_SUCCESS_PLURAL": "Pagine {{arg}} spostate correttamente",
+            "MOVE_PAGE_ERROR": "Impossibile spostare le pagine",
+            "RESOLVE_SUCCESS": "Le pagine sono state contrassegnate come risolte",
+            "RESOLVE_ERROR": "Impossibile contrassegnare le pagine come risolte",
+            "REJECT_SUCCESS": "Documento rifiutato",
+            "REJECT_ERROR": "Impossibile rifiutare il documento"
+        },
+        "NOTIFICATIONS": {
+            "SCREEN_LOAD_ERROR_DOCUMENT_STRUCTURE": "Document structure not found in batch state input data",
+            "SCREEN_LOAD_ERROR_CONTENT_FILE_REFS": "Content file references not found in task input data",
+            "TASK_ACTION_ERROR": "Impossibile salvare o inviare l'attività",
+            "TASK_CLAIM_ERROR": "Richiesta attività non riuscita",
+            "TASK_UNCLAIM_ERROR": "Rifiuto attività non riuscito"
+        },
+        "TASK_ACTIONS": {
+            "SAVE": "Salva",
+            "SUBMIT": "Invia"
+        }
+    }
+}

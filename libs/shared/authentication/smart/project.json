@@ -1,0 +1,36 @@
+{
+    "name": "shared-authentication-smart",
+    "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+    "projectType": "library",
+    "sourceRoot": "libs/shared/authentication/smart/src",
+    "prefix": "alfresco-dbp",
+    "targets": {
+        "lint": {},
+        "test": {
+            "executor": "@angular-devkit/build-angular:karma",
+            "options": {
+                "codeCoverage": true,
+                "main": "libs/shared/authentication/smart/src/test.ts",
+                "tsConfig": "libs/shared/authentication/smart/tsconfig.spec.json",
+                "karmaConfig": "libs/shared/authentication/smart/karma.conf.js",
+                "stylePreprocessorOptions": {
+                    "includePaths": ["libs/shared/core/src/styles"]
+                }
+            },
+            "configurations": {
+                "adf": {
+                    "tsConfig": "libs/shared/authentication/smart/tsconfig.spec.adf.json",
+                    "karmaConfig": "libs/shared/authentication/smart/karma.conf.js",
+                    "progress": false,
+                    "codeCoverage": false,
+                    "stylePreprocessorOptions": {
+                        "includePaths": ["libs/shared/core/src/styles", "../alfresco-ng2-components/lib/core/src/lib"]
+                    }
+                }
+            },
+            "outputs": ["{workspaceRoot}/coverage/libs/shared/authentication/smart"]
+        },
+        "stylelint": {}
+    },
+    "tags": ["scope:shared-authentication-smart", "category:shared-authentication", "category:shared-unit"]
+}

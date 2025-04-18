@@ -1,0 +1,18 @@
+{
+    "APP": {
+        "PUBLIC_FORM": {
+            "SUCCESS": {
+                "LOADING_FORM": "Załadowano formularz",
+                "SUBMIT_FORM": "Przesłano formularz",
+                "SCREEN": {
+                    "TITLE": "Dziękujemy",
+                    "SUBTITLE": "Formularz został przesłany"
+                }
+            },
+            "ACTIONS": {
+                "START": "Rozpocznij proces",
+                "CANCEL": "Anuluj"
+            }
+        }
+    }
+}

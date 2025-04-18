@@ -1,0 +1,43 @@
+@use '../colors' as colors;
+@use '@angular/material' as mat;
+
+$hy-primary: map-merge(
+    colors.$hy-primary,
+    (
+        50: #6b7280,
+        200: #e2eefa,
+        300: #e5e7eb,
+        500: #0a60ce,
+        600: #0e73d8,
+        700: #04a003,
+        1100: #5eead480,
+    )
+);
+
+$hy-neutral: map-merge(
+    colors.$hy-neutral,
+    (
+        10: #fff,
+        40: #f3f4f6,
+        50: #d1d5db,
+        100: #e2eefa,
+        200: #9ca3af,
+        300: #757575,
+        400: #f5f5f5,
+        1000: #000000,
+    )
+);
+
+$hy-warn: map-merge(
+    colors.$hy-warn,
+    (
+        50: #fef1f1,
+        500: #ff5050,
+        600: #da1500,
+    )
+);
+
+$hy-shortcut-browser: (
+    100: #bdbdbd99,
+    200: #000000de,
+);

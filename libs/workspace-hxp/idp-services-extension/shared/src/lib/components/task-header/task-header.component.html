@@ -1,0 +1,24 @@
+<div class="idp-task-header">
+    <ng-container *hylandIdpLet="headerInfo$ | async as headerInfo">
+        <div class="idp-div-header-field">
+            <a class="idp-go-back" href="javascript:void(0);" (click)="goBack()" style="text-decoration: none;" data-automation-id="idp-go-back-button">
+                <mat-icon class="idp-go-back-icon">arrow_back</mat-icon>
+                <span class="idp-go-back-text">{{ 'IDP_CLASS_VERIFICATION.TASK_HEADER.BACK_LABEL' | translate }}</span>
+            </a>
+        </div>
+        <div class="idp-div-header-field">
+            <span class="idp-task-header-label idp-task-header-header" data-automation-id="ipd-task-name">{{ (headerInfo?.taskLabel || '') | translate }}</span>
+            <div>
+              <span *ngIf="headerInfo?.issuesToResolve" class="idp-task-header-value idp-task-header-issue-count"  data-automation-id="idp-issue-count">
+                {{ headerInfo?.issuesToResolve }} {{ 'IDP_CLASS_VERIFICATION.TASK_HEADER.REMAINING_ISSUES' | translate }}
+              </span>
+              <span *ngIf="!headerInfo?.issuesToResolve" class="idp-task-header-value idp-task-header-issue-count-resolved" data-automation-id="idp-issue-count-resolved">
+                {{ 'IDP_CLASS_VERIFICATION.TASK_HEADER.ALL_RESOLVED' | translate }}</span>
+            </div>
+        </div>
+        <div class="idp-div-header-field" *ngFor="let prop of headerInfo?.props || []">
+            <span class="idp-task-header-label">{{ prop.label | translate }}</span>
+            <span class="idp-task-header-value" [attr.data-automation-id]="generateAutomationId(prop.label)">{{ prop.value }}</span>
+        </div>
+    </ng-container>
+</div>

@@ -1,0 +1,17 @@
+@use 'mat-selectors' as ms;
+@use '@hylandsoftware/design-tokens/scss' as *;
+
+.hxp-dialog-fixed-size-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    #{ms.$mat-dialog-content}.hxp-fixed-dialog-content-height {
+        height: 100%;
+        color: $hy-colors-origin-black;
+    }
+
+    #{ms.$mat-dialog-actions} {
+        padding: $hy-spacing-24;
+    }
+}

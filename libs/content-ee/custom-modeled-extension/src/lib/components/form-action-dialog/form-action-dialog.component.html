@@ -1,0 +1,22 @@
+<mat-dialog-content>
+    <adf-cloud-form [appName]="data.appName" (formLoaded)="onFormLoaded($event)" [formId]="data.formDefinitionId"
+        [showSaveButton]="false" [showCompleteButton]="false" [showRefreshButton]="false" [showValidationIcon]="false"
+        [showTitle]="false" [data]="$any(values)">
+        <adf-cloud-form-custom-outcomes>
+            <ng-template [ngTemplateOutlet]="formActionButtons">
+            </ng-template>
+        </adf-cloud-form-custom-outcomes>
+    </adf-cloud-form>
+
+    <ng-template #formActionButtons>
+        <div class="ama-form-action-buttons-container">
+            <button mat-button mat-dialog-close data-automation-id="form-action-cancel-btn">
+                {{ 'CUSTOM_MODELED_EXTENSION.FORM_ACTION.CANCEL' | translate | uppercase}}
+            </button>
+            <button color="primary" mat-button [disabled]="!isFormValid()" (click)="submitForm()"
+                data-automation-id="form-action-complete-btn" class="form-action-complete-btn">
+                {{'CUSTOM_MODELED_EXTENSION.FORM_ACTION.SUBMIT' | translate | uppercase}}
+            </button>
+        </div>
+    </ng-template>
+</mat-dialog-content>

@@ -1,0 +1,24 @@
+{
+    "SHARED_AUTHENTICATION": {
+        "DETAILS": {
+            "USERNAME": "Username",
+            "PASSWORD": "Password",
+            "TOKEN": "Token",
+            "CLIENT_ID": "Client id",
+            "CLIENT_SECRET": "Client secret",
+            "ENDPOINT": "Endpoint",
+            "SCOPE": "Scope",
+            "GRANT_TYPE": "Grant type"
+        },
+        "ERRORS": {
+            "REQUIRED": "This field is required",
+            "URL_ERROR": "This url is not valid",
+            "SCOPE_ERROR": "Only comma-separated alphanumeric characters are allowed",
+            "INVALID_FIELD": "Field is invalid"
+        },
+        "HINTS": {
+            "HIDE_PASSWORD": "Hide password",
+            "SCOPE_HINT": "E.g.: openId,email"
+        }
+    }
+}

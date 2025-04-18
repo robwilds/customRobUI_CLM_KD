@@ -1,0 +1,64 @@
+@use 'mat-selectors' as ms;
+
+.ama-identity {
+    &-group-list {
+        margin: 5px 0;
+        padding: 10px 0;
+    }
+
+    &-group {
+        width: 100%;
+
+        &-option-not-active {
+            background: inherit !important;
+        }
+
+        #{ms.$mat-form-field} {
+            width: 100%;
+        }
+
+        &-error {
+            margin-top: -10px;
+            position: absolute;
+            height: 20px;
+
+            &-message {
+                padding-right: 8px;
+                height: 16px;
+                font-size: var(--theme-caption-font-size);
+                line-height: 1.33;
+                color: var(--theme-warn-color);
+                width: auto;
+            }
+
+            &-icon {
+                font-size: var(--theme-adf-icon-1-font-size);
+                color: var(--theme-warn-color);
+            }
+        }
+
+        &-row {
+            align-items: center;
+            box-sizing: border-box;
+            column-gap: 10px;
+            display: flex;
+            flex-direction: row;
+            place-content: center flex-start;
+        }
+    }
+}
+
+#{ms.$mat-autocomplete-panel} #{ms.$mat-fab} {
+    background: var(--theme-primary-color);
+    width: 40px;
+    height: 40px;
+    font-weight: bolder;
+    font-size: var(--theme-adf-picture-1-font-size);
+    box-shadow: none !important;
+    color: var(--theme-primary-color-default-contrast);
+    font-family: inherit;
+
+    #{ms.$mat-button-wrapper} {
+        display: inline !important;
+    }
+}

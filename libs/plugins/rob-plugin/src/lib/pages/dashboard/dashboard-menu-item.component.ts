@@ -1,0 +1,36 @@
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
+
+@Component({
+    template: `
+        <button
+            mat-button
+            (click)="navigateToPage()"
+            style="
+                    width: 100%;
+                    font-family: 'Open sans';
+                    font-size: 16px;
+                    font-weight: normal;
+                    padding: 5px 20px;
+                "
+        >
+        <span
+            style="
+                display: block;
+                width: 100%;
+                text-align: left;
+            ">dashboard</span>
+    </button>`,
+    standalone: true,
+    imports: [MatButtonModule],
+})
+export class DashboardMenuItemComponent {
+    constructor(
+        private router: Router,
+    ) {}
+
+    navigateToPage(): void {
+        void this.router.navigate(['/dashboard']);
+    }
+}

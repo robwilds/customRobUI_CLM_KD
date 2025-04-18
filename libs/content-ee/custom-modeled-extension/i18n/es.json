@@ -1,0 +1,16 @@
+{
+    "CUSTOM_MODELED_EXTENSION": {
+        "SNACKBAR": {
+            "BACKEND_SERVICE_ERROR": "Error de red desconocido. Se han desactivado las funciones asociadas a Process Automation.",
+            "NO_PROCESS_DEFINITION_ERROR": "No hay definición de proceso con la clave proporcionada",
+            "PROCESS_CREATED_SUCCESSFULLY": "Instancia de proceso creada correctamente",
+            "FORM_SUBMITTED_SUCCESSFULLY": "Formulario enviado correctamente",
+            "ACTION_PERFORMED_SUCCESSFULLY": "Acción realizada correctamente",
+            "CAN_NOT_ATTACH": "No se puede adjuntar el contenido seleccionado"
+        },
+        "FORM_ACTION": {
+            "CANCEL": "Cancelar",
+            "SUBMIT": "Enviar"
+        }
+    }
+}

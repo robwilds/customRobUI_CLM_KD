@@ -1,0 +1,23 @@
+{
+  "SHARED_AUTHENTICATION": {
+    "DETAILS": {
+      "USERNAME": "ユーザー名",
+      "PASSWORD": "パスワード",
+      "TOKEN": "トークン",
+      "CLIENT_ID": "クライアント ID",
+      "CLIENT_SECRET": "クライアントシークレット",
+      "ENDPOINT": "エンドポイント",
+      "SCOPE": "範囲"
+    },
+    "ERRORS": {
+      "REQUIRED": "このフィールドは必須です",
+      "URL_ERROR": "このurlは無効です",
+      "SCOPE_ERROR": "コンマで区切られた文字のみ使用可能",
+      "INVALID_FIELD": "フィールドは無効です"
+    },
+    "HINTS": {
+      "HIDE_PASSWORD": "パスワードの非表示",
+      "SCOPE_HINT": "例：openID、Eメール..."
+    }
+  }
+}

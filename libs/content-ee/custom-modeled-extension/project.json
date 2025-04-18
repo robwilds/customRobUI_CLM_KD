@@ -1,0 +1,54 @@
+{
+    "name": "content-ee-custom-modeled-extension",
+    "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+    "projectType": "library",
+    "sourceRoot": "libs/content-ee/custom-modeled-extension/src",
+    "targets": {
+        "build": {
+            "executor": "@nx/angular:package",
+            "outputs": ["{workspaceRoot}/dist/libs/content-ee/custom-modeled-extension"],
+            "options": {
+                "project": "libs/content-ee/custom-modeled-extension/ng-package.json"
+            },
+            "configurations": {
+                "production": {
+                    "tsConfig": "libs/content-ee/custom-modeled-extension/tsconfig.lib.prod.json"
+                },
+                "development": {
+                    "tsConfig": "libs/content-ee/custom-modeled-extension/tsconfig.lib.json"
+                },
+                "adf": {
+                    "tsConfig": "libs/content-ee/custom-modeled-extension/tsconfig.lib.adf.json"
+                }
+            },
+            "defaultConfiguration": "production"
+        },
+        "test": {
+            "executor": "@angular-devkit/build-angular:karma",
+            "options": {
+                "codeCoverage": true,
+                "main": "libs/content-ee/custom-modeled-extension/src/test.ts",
+                "tsConfig": "libs/content-ee/custom-modeled-extension/tsconfig.spec.json",
+                "karmaConfig": "libs/content-ee/custom-modeled-extension/karma.conf.js",
+                "stylePreprocessorOptions": {
+                    "includePaths": ["libs/shared/core/src/styles", "node_modules/@alfresco/adf-core/lib"]
+                }
+            },
+            "configurations": {
+                "adf": {
+                    "tsConfig": "libs/content-ee/custom-modeled-extension/tsconfig.spec.adf.json",
+                    "karmaConfig": "libs/content-ee/custom-modeled-extension/karma.conf.js",
+                    "progress": false,
+                    "codeCoverage": false,
+                    "stylePreprocessorOptions": {
+                        "includePaths": ["libs/shared/core/src/styles", "../alfresco-ng2-components/lib/core/src/lib"]
+                    }
+                }
+            },
+            "outputs": ["{workspaceRoot}/coverage/libs/content-ee/custom-modeled-extension"]
+        },
+        "lint": {},
+        "stylelint": {}
+    },
+    "tags": ["scope:content-ee-custom-modeled-extension", "type:feature", "category:content-ee-apa"]
+}

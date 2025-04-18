@@ -1,0 +1,14 @@
+@use '@hylandsoftware/design-tokens/scss' as *;
+
+#hxp-viewer {
+    adf-toolbar-title {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        align-items: center;
+
+        hxp-document-version-selector {
+            margin-left: $hy-spacing-12;
+        }
+    }
+}

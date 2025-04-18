@@ -1,0 +1,24 @@
+@use '@angular/material' as mat;
+
+@mixin components-variables($theme) {
+    $foreground: map-get($theme, foreground);
+
+    $defaults: (
+        --adf-header-icon-button-default-color: $studio-icon-button-default-color,
+        --adf-header-icon-button-default-border-radius: $studio-icon-button-default-border-radius,
+        --adf-header-icon-button-hover-color: $studio-icon-button-hover-color,
+        --adf-header-icon-button-pressed-color: $studio-icon-button-pressed-color,
+        --adf-header-icon-button-disabled-color: $studio-icon-button-disabled-color,
+
+        --adf-filter-chip-background-color: $studio-filter-chip-background-color,
+        --adf-filter-chip-text-color: $studio-filter-chip-text-color,
+        --adf-filter-menu-box-shadow: $studio-filter-menu-box-shadow
+    );
+
+    /* propagates SCSS variables into the CSS variables scope */
+    :root {
+        @each $name, $value in $defaults {
+            #{$name}: #{$value};
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "CUSTOM_MODELED_EXTENSION": {
+    "SNACKBAR": {
+      "BACKEND_SERVICE_ERROR": "حدث خطأ شبكة غير معروف. تم تعطيل الميزات المرتبطة بتطبيق Process Automation.",
+      "NO_PROCESS_DEFINITION_ERROR": "لا يوجد تعريف عملية بالمفتاح المزود",
+      "PROCESS_CREATED_SUCCESSFULLY": "تم إنشاء مثيل العملية بنجاح",
+      "FORM_SUBMITTED_SUCCESSFULLY": "تم إرسال النموذج بنجاح",
+      "ACTION_PERFORMED_SUCCESSFULLY": "تم تنفيذ الإجراء بنجاح",
+      "CAN_NOT_ATTACH": "يتعذر إرفاق المحتوى المحدد"
+    },
+    "FORM_ACTION": {
+      "CANCEL": "إلغاء",
+      "SUBMIT": "إرسال"
+    }
+  }
+}

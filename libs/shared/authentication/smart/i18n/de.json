@@ -1,0 +1,24 @@
+{
+    "SHARED_AUTHENTICATION": {
+        "DETAILS": {
+            "USERNAME": "Benutzername",
+            "PASSWORD": "Passwort",
+            "TOKEN": "Kennung",
+            "CLIENT_ID": "Client-ID",
+            "CLIENT_SECRET": "Client-Geheimkennung",
+            "ENDPOINT": "Endpunkt",
+            "SCOPE": "Bereich",
+            "GRANT_TYPE": "Zuschusstyp"
+        },
+        "ERRORS": {
+            "REQUIRED": "Dieses Feld ist erforderlich",
+            "URL_ERROR": "Diese URL ist ungültig",
+            "SCOPE_ERROR": "Eingabe von Leerzeichen nicht zulässig, Kommata sind zu verwenden",
+            "INVALID_FIELD": "Feld ist ungültig"
+        },
+        "HINTS": {
+            "HIDE_PASSWORD": "Passwort verbergen",
+            "SCOPE_HINT": "z.B. openID,E-Mail"
+        }
+    }
+}

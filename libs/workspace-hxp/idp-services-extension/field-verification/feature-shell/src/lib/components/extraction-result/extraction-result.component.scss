@@ -1,0 +1,31 @@
+@use 'idp-colors' as colors;
+
+.idp-extraction-result {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    font-family: sans-serif;
+
+    .idp-has-issue {
+        color: map-get(colors.$hy-warn, 600);
+    }
+
+    .idp-no-issue {
+        color: map-get(colors.$hy-primary, 700);
+    }
+
+    &-text {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0;
+    }
+
+    &-icon {
+        width: var(--metadata-extraction-icon-size);
+        height: var(--metadata-extraction-icon-size);
+        font-size: var(--metadata-extraction-icon-size);
+        margin-right: 5px;
+    }
+}

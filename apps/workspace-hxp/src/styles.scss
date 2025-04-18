@@ -1,0 +1,129 @@
+/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@use './styles/colors';
+@use './styles/snack-bar' as *;
+@use 'mat-selectors' as ms;
+@use '@hylandsoftware/design-tokens/scss' as *;
+@use 'viewer.theme' as idp-viewer;
+
+@import '@alfresco/adf-core/theming';
+@import '@alfresco/adf-core/breadcrumbs';
+@import './styles/material-theme';
+@import './styles/material';
+@import './styles/dialog';
+@import './styles/design-tokens';
+@import './styles/components-variables';
+
+@include components-variables($theme);
+@include mat.typography-hierarchy($theme);
+
+$typography: map-get($theme, typography);
+
+.idp-viewer {
+    @include idp-viewer.viewer-theme($theme, $typography);
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: var(--theme-font-family);
+    @include adf-toasts;
+}
+
+.adf-breadcrumb-item {
+    display: flex;
+    align-items: center;
+    padding-right: 2px;
+    overflow: hidden;
+    line-height: 33px;
+    font-size: var(--theme-body-1-font-size);
+    font-weight: 400;
+    color: var(--theme-text-color);
+}
+
+adf-datatable {
+    font-size: var(--theme-body-1-font-size);
+}
+
+$background: map-get($theme, background);
+$foreground: map-get($theme, foreground);
+$accent: map-get($theme, accent);
+$warn: map-get($theme, warn);
+$primary: map-get($theme, primary);
+$hy-text-white: $hy-white;
+
+$defaults: (
+    --theme-background-selected-button-color: mat.get-color-from-palette($background, selected-button),
+    --theme-background-hover-color: mat.get-color-from-palette($background, hover),
+    --theme-card-background-color: mat.get-color-from-palette($background, card),
+    --theme-text-color: mat.get-color-from-palette($foreground, text),
+    --theme-warn-color: mat.get-color-from-palette($warn),
+    --theme-primary-color: mat.get-color-from-palette($primary),
+    --adf-card-view-background: mat.get-color-from-palette($background, card),
+    --adf-card-view-array-item-background: mat.get-color-from-palette($background, card),
+    --snack-bar-success-color: mat.get-color-from-palette($background, snack-bar-success),
+    --theme-accent-color-a200: mat.get-color-from-palette($accent, A200),
+    --theme-secondary-text-color: mat.get-color-from-palette($foreground, secondary-text),
+    --theme-colors-mat-blue: mat.get-color-from-palette($primary, 50),
+);
+
+:root {
+    @each $name, $value in $defaults {
+        #{$name}: #{$value};
+    }
+}
+
+/* Angular 15 adds grey background on mat form components
+  below removes that background color
+  Manipulate initial background color */
+#{ms.$mdc-text-field--filled}:not(#{ms.$mdc-text-field--disabled}) {
+    background-color: transparent !important;
+}
+
+/* Manipulate background color on hover and focus */
+#{ms.$mat-mdc-form-field-focus-overlay} {
+    background-color: transparent !important;
+}
+
+hxp-content-repository,
+#{ms.$cdk-overlay-pane},
+app-experience-workspace {
+    #{ms.$mat-checkbox}
+        #{ms.$mat-checkbox-native-control}:enabled:not(:checked):not(:indeterminate):not([data-indeterminate='true'])
+        ~ #{ms.$mat-checkbox-background} {
+        border-color: $hy-colors-border-default;
+    }
+}
+
+.hxp-document-category-filter-list {
+    #{ms.$mat-list-option}
+        #{ms.$mat-checkbox-inner-container}
+        #{ms.$mat-checkbox-native-control}:enabled:not(:checked):not(:indeterminate):not([data-indeterminate='true'])
+        ~ #{ms.$mat-checkbox-background} {
+        border-color: $hy-colors-border-default;
+    }
+}
+adf-context-menu {
+    #{ms.$mat-menu-panel} {
+        box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
+    }
+}
+
+.adf-cloud-process-header,
+hxp-properties-viewer-container {
+    .adf-property {
+        .adf-property-value#{ms.$mat-text-field-input} {
+            color: var(--adf-metadata-property-panel-title-color);
+        }
+    }
+}
+
+.idp-screens-root-container {
+    /* stylelint-disable-next-line no-invalid-position-at-import-rule */
+    @import './styles/idp-styles/idp-theme';
+
+    @include mat.all-component-colors($idp-theme);
+    @include mat.all-component-typographies($idp-theme);
+    @include idp-screens-overrides();
+}

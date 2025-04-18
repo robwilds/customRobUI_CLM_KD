@@ -1,0 +1,146 @@
+<form>
+    <mat-form-field
+        class="ama-identity-group"
+        [class.adf-invalid]="hasError() && isDirty()"
+    >
+        <mat-label *ngIf="!isReadonly()" id="ama-identity-group-title-id">
+            {{ (title || 'SHARED_IDENTITY.GROUPS.SEARCH-GROUP') | translate }}
+        </mat-label>
+        <mat-chip-grid
+            #groupChipList
+            [disabled]="isReadonly() || isValidationLoading()"
+            data-automation-id="ama-identity-group-chip-list"
+        >
+            <mat-chip-row
+                *ngFor="let group of selectedGroups"
+                [removable]="!(group.readonly)"
+                [attr.data-automation-id]="'ama-identity-group-chip-' + group.name"
+                (removed)="onRemove(group)"
+                matTooltip="{{ (group.readonly ? 'SHARED_IDENTITY.GROUPS.MANDATORY' : '') | translate }}"
+            >
+                {{group.name}}
+                <mat-icon
+                    *ngIf="!(group.readonly || readOnly)"
+                    matChipRemove
+                    [attr.data-automation-id]="'ama-identity-group-chip-remove-icon-' + group.name"
+                >
+                    cancel
+                </mat-icon>
+            </mat-chip-row>
+            <input
+                matInput
+                [formControl]="searchGroupsControl"
+                [matAutocomplete]="auto"
+                [matChipInputFor]="groupChipList"
+                (focus)="setFocus(true)"
+                (blur)="setFocus(false); markAsTouched()"
+                class="ama-identity-group-input"
+                data-automation-id="ama-identity-group-search-input"
+                #groupInput
+            />
+        </mat-chip-grid>
+
+        <mat-autocomplete
+            autoActiveFirstOption
+            #auto="matAutocomplete"
+            class="ama-identity-group-list"
+            (optionSelected)="onSelect($event.option.value)"
+            [displayWith]="getDisplayName"
+            data-automation-id="ama-identity-group-autocomplete"
+        >
+            <ng-container
+                *ngIf="(searchGroups$ | async)?.length else noResults"
+            >
+                <mat-option
+                    *ngFor="let group of searchGroups$ | async; let i = index"
+                    [value]="group"
+                    [attr.data-automation-id]="'ama-identity-group-chip-' + group.name"
+                >
+                    <div
+                        class="ama-identity-group-row"
+                        id="adf-group-{{i}}"
+                        data-automation-id="ama-identity-group-row"
+                    >
+                        <button class="adf-group-short-name" mat-fab>
+                            {{group | groupNameInitial }}
+                        </button>
+                        <span>{{group.name}}</span>
+                    </div>
+                </mat-option>
+            </ng-container>
+            <ng-template #noResults>
+                <mat-option
+                    *ngIf="searchGroupsControl.hasError('searchTypingError') && !searchLoading"
+                    disabled
+                    class="ama-identity-group-option-not-active"
+                    data-automation-id="ama-identity-group-no-results"
+                >
+                    <span>
+                        {{ 'SHARED_IDENTITY.GROUPS.ERROR.NOT_FOUND' |
+                        translate : {groupName: searchedValue} }}
+                    </span>
+                </mat-option>
+            </ng-template>
+        </mat-autocomplete>
+    </mat-form-field>
+    <mat-progress-bar *ngIf="validationLoading" mode="indeterminate" data-automation-id="identity-groups-progress-bar">
+    </mat-progress-bar>
+
+    <div class="adf-error-container">
+        <mat-error
+            *ngIf="hasPreselectError() &&  !isValidationLoading()"
+            [@transitionMessages]="subscriptAnimationState"
+            class="adf-error"
+        >
+            <div class="adf-error-text">
+                {{ 'SHARED_IDENTITY.GROUPS.ERROR.NOT_FOUND' | translate : {groupName: validateGroupsMessage} }}
+            </div>
+        </mat-error>
+        <mat-error
+            *ngIf="searchGroupsControl.hasError('pattern')"
+            [@transitionMessages]="subscriptAnimationState"
+            class="adf-error"
+        >
+            <div class="adf-error-text">
+                {{ 'SHARED_IDENTITY.PEOPLE.ERROR.INVALID_PATTERN' | translate: {pattern: getValidationPattern()} }}
+            </div>
+        </mat-error>
+        <mat-error
+            *ngIf="searchGroupsControl.hasError('maxlength')"
+            [@transitionMessages]="subscriptAnimationState"
+            class="adf-error"
+        >
+            <div class="adf-error-text">
+                {{ 'SHARED_IDENTITY.PEOPLE.ERROR.INVALID_MAX_LENGTH' | translate: {requiredLength: getValidationMaxLength()} }}
+            </div>
+        </mat-error>
+        <mat-error
+            *ngIf="searchGroupsControl.hasError('minlength')"
+            [@transitionMessages]="subscriptAnimationState"
+            class="adf-error"
+        >
+            <div class="adf-error-text">
+                {{ 'SHARED_IDENTITY.PEOPLE.ERROR.INVALID_MIN_LENGTH' | translate: {requiredLength: getValidationMinLength()} }}
+            </div>
+        </mat-error>
+        <mat-error
+            *ngIf="(searchGroupsControl.hasError('required') || groupChipsCtrl.hasError('required')) && isDirty()"
+            [@transitionMessages]="subscriptAnimationState"
+            class="adf-error"
+        >
+            <div class="adf-error-text">
+                {{ 'SHARED_IDENTITY.PEOPLE.ERROR.REQUIRED' | translate }}
+            </div>
+        </mat-error>
+        <mat-error
+            *ngIf="searchGroupsControl.hasError('searchTypingError') && !this.isFocused"
+            data-automation-id="invalid-groups-typing-error"
+            [@transitionMessages]="subscriptAnimationState"
+            class="adf-error"
+        >
+            <div class="adf-error-text">
+                {{ 'SHARED_IDENTITY.GROUPS.ERROR.NOT_FOUND' | translate : {groupName: searchedValue} }}
+            </div>
+        </mat-error>
+    </div>
+</form>

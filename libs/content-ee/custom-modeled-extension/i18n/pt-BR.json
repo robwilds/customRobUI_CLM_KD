@@ -1,0 +1,16 @@
+{
+  "CUSTOM_MODELED_EXTENSION": {
+    "SNACKBAR": {
+      "BACKEND_SERVICE_ERROR": "Ocorreu um erro de rede desconhecido. Recursos relacionados ao Process Automation estão desativados.",
+      "NO_PROCESS_DEFINITION_ERROR": "Não há definição de processo com a chave fornecida",
+      "PROCESS_CREATED_SUCCESSFULLY": "Instância de processo excluída com êxito",
+      "FORM_SUBMITTED_SUCCESSFULLY": "Formulário enviado com êxito",
+      "ACTION_PERFORMED_SUCCESSFULLY": "Ação realizada com êxito",
+      "CAN_NOT_ATTACH": "Não é possível anexar o conteúdo selecionado"
+    },
+    "FORM_ACTION": {
+      "CANCEL": "Cancelar",
+      "SUBMIT": "Enviar"
+    }
+  }
+}

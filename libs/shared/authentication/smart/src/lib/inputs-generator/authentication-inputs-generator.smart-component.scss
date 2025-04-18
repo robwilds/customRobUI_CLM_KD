@@ -1,0 +1,10 @@
+@use 'mat-selectors' as ms;
+
+.apa-generator-inputs-container {
+    display: flex;
+    flex-direction: column;
+
+    #{ms.$mat-expansion-panel} {
+        margin-bottom: 10px;
+    }
+}

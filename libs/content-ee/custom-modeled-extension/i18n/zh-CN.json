@@ -1,0 +1,16 @@
+{
+  "CUSTOM_MODELED_EXTENSION": {
+    "SNACKBAR": {
+      "BACKEND_SERVICE_ERROR": "出现未知网络错误。与 Process Automation 相关的功能已被禁用。",
+      "NO_PROCESS_DEFINITION_ERROR": "不存在具有提供的密钥的流程定义",
+      "PROCESS_CREATED_SUCCESSFULLY": "流程实例已成功创建",
+      "FORM_SUBMITTED_SUCCESSFULLY": "表单已成功提交",
+      "ACTION_PERFORMED_SUCCESSFULLY": "成功执行操作",
+      "CAN_NOT_ATTACH": "无法附加所选内容"
+    },
+    "FORM_ACTION": {
+      "CANCEL": "取消",
+      "SUBMIT": "提交"
+    }
+  }
+}

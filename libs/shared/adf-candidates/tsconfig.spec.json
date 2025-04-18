@@ -1,0 +1,14 @@
+{
+    "extends": "./tsconfig.lib.json",
+    "compilerOptions": {
+        "outDir": "../../../out-tsc/adf-candidates-spec"
+    },
+    "include": ["**/*.spec.ts", "**/*.test.ts", "**/*.d.ts", "jest.config.ts"],
+    "angularCompilerOptions": {
+        "skipTemplateCodegen": true,
+        "strictMetadataEmit": true,
+        "fullTemplateTypeCheck": true,
+        "strictInjectionParameters": true,
+        "enableResourceInlining": true
+    }
+}

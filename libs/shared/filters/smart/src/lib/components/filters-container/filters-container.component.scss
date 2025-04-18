@@ -1,0 +1,20 @@
+.hxp-filters-container {
+    &__title {
+        font-weight: bold;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+    }
+
+    &__more-button {
+        background-color: var(--adf-filter-chip-background-color) !important;
+    }
+
+    &__menu-icon {
+        font-weight: bold;
+        color: var(--adf-filter-chip-text-color) !important;
+    }
+}

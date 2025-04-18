@@ -1,0 +1,23 @@
+{
+  "SHARED_AUTHENTICATION": {
+    "DETAILS": {
+      "USERNAME": "Brugernavn",
+      "PASSWORD": "Adgangskode",
+      "TOKEN": "Token",
+      "CLIENT_ID": "Klient-id",
+      "CLIENT_SECRET": "Klienthemmelighed",
+      "ENDPOINT": "Slutpunkt",
+      "SCOPE": "Omfang"
+    },
+    "ERRORS": {
+      "REQUIRED": "Dette felt er påkrævet",
+      "URL_ERROR": "Denne url er ikke gyldig",
+      "SCOPE_ERROR": "Eneste tilladte tegn med kommaseparerede",
+      "INVALID_FIELD": "Felt er ugyldigt"
+    },
+    "HINTS": {
+      "HIDE_PASSWORD": "Skjul adgangskode",
+      "SCOPE_HINT": "F.eks. åben-id,e-mail..."
+    }
+  }
+}

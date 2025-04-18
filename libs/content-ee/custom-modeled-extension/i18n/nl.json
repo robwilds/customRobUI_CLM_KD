@@ -1,0 +1,16 @@
+{
+  "CUSTOM_MODELED_EXTENSION": {
+    "SNACKBAR": {
+      "BACKEND_SERVICE_ERROR": "Er is een onbekende netwerkfout opgetreden. Aan Process Automation gerelateerde functies zijn uitgeschakeld.",
+      "NO_PROCESS_DEFINITION_ERROR": "Er is geen procesdefinitie met de opgegeven sleutel",
+      "PROCESS_CREATED_SUCCESSFULLY": "Procesinstantie is gemaakt",
+      "FORM_SUBMITTED_SUCCESSFULLY": "Formulier is verzonden",
+      "ACTION_PERFORMED_SUCCESSFULLY": "Actie is uitgevoerd",
+      "CAN_NOT_ATTACH": "Kan de geselecteerde content niet bijvoegen"
+    },
+    "FORM_ACTION": {
+      "CANCEL": "Annuleren",
+      "SUBMIT": "Verzenden"
+    }
+  }
+}

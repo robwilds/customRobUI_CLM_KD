@@ -1,0 +1,23 @@
+{
+  "SHARED_AUTHENTICATION": {
+    "DETAILS": {
+      "USERNAME": "Nome de usuário",
+      "PASSWORD": "Senha",
+      "TOKEN": "Token",
+      "CLIENT_ID": "ID do cliente",
+      "CLIENT_SECRET": "Segredo do cliente",
+      "ENDPOINT": "Ponto final",
+      "SCOPE": "Escopo"
+    },
+    "ERRORS": {
+      "REQUIRED": "Este campo é obrigatório",
+      "URL_ERROR": "Este url não é válido",
+      "SCOPE_ERROR": "Caracteres permitidos somente separados por vírgula",
+      "INVALID_FIELD": "O campo é inválido"
+    },
+    "HINTS": {
+      "HIDE_PASSWORD": "Ocultar senha",
+      "SCOPE_HINT": "E.g openId,email..."
+    }
+  }
+}

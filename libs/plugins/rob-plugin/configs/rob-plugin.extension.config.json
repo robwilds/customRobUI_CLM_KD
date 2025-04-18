@@ -1,0 +1,44 @@
+{
+  "$version": "1.0.0",
+  "$id": "plugin-rob-plugin-24d22217-609f-4c6a-80b0-5725ab751f2e",
+  "$name": "rob-plugin.extension.config",
+  "$description": "rob-plugin",
+  "$vendor": "",
+  "$license": "Apache-2.0",
+  "features": {
+    "navbar": [
+      {
+        "id": "page-dashboard-c846e4b6-5129-40dd-af1d-18fc0bd310d4",
+        "items": [
+          {
+            "id": "page-menu-item-7b4564c4-9e72-47f1-9a27-e250dde1aed1",
+            "component": "page-menu-item-7b4564c4-9e72-47f1-9a27-e250dde1aed1"
+          }
+        ]
+      },
+      {
+        "id": "page-kdsearch-dd9b53a4-d5b1-4724-98a4-0bb47fbe52de",
+        "items": [
+          {
+            "id": "page-menu-item-da21127b-eefe-4043-9bc7-b7c81fbd802b",
+            "component": "page-menu-item-da21127b-eefe-4043-9bc7-b7c81fbd802b"
+          }
+        ]
+      }
+    ]
+  },
+  "routes": [
+    {
+      "id": "page-route-dashboard-7a8ae662-6967-45c9-b056-c20c4fd13b2d",
+      "path": "dashboard",
+      "parentRoute": "",
+      "component": "page-component-964184ac-ff71-46a3-b007-8202b4400a34"
+    },
+    {
+      "id": "page-route-kdsearch-3b10b71a-3b9e-44d1-880f-002151f37695",
+      "path": "kdsearch",
+      "parentRoute": "",
+      "component": "page-component-39bc0288-a971-44bc-a2b4-035c6e84cd4d"
+    }
+  ]
+}

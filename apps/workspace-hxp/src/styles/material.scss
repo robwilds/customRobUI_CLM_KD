@@ -1,0 +1,112 @@
+@use 'mat-selectors' as ms;
+@use '@hylandsoftware/design-tokens/scss' as *;
+@use '@angular/material' as mat;
+@use 'hxp-inputs' as hxp-inputs;
+@use 'hxp-buttons' as hxp-buttons;
+
+$primary-palette: map-get($theme, primary);
+$accent-palette: map-get($theme, accent);
+
+@mixin hxp-input-variables {
+    $defaults: (
+        --hxp-input-text-field-focus-outline-color: mat.get-color-from-palette($primary-palette, 700),
+        --hxp-input-text-field-outline-color: mat.get-color-from-palette($accent-palette, 500),
+        --hxp-input-text-field-input-text-color: mat.get-color-from-palette($accent-palette, 900),
+        --hxp-input-text-field-label-color: mat.get-color-from-palette($accent-palette, 600),
+    );
+    :root {
+        @each $name, $value in $defaults {
+            #{$name}: #{$value};
+        }
+    }
+}
+
+@include hxp-input-variables;
+
+#{ms.$mat-nav-list-element} {
+    #{ms.$mat-list-item} {
+        height: 40px !important;
+        font-size: var(--theme-body-1-font-size);
+    }
+}
+
+#{ms.$mat-accordion-element}.hxp-nav-accordion {
+    #{ms.$mat-expansion-panel-body} {
+        padding: 0 16px 16px 8px;
+    }
+}
+.hxp-global-mat-select-panel {
+    #{ms.$mat-mdc-option} #{ms.$mat-list-item-text} {
+        color: $hy-colors-text-default;
+        font-size: $hy-font-sizes-20;
+    }
+}
+$primary-palette: map-get($theme, primary);
+$accent-palette: map-get($theme, accent);
+
+@mixin hxp-button-variables {
+    $defaults: (
+        --hxp-text-button-not-disabled-color: mat.get-color-from-palette($primary-palette, default),
+        --hxp-text-button-not-disabled-background-color: mat.get-color-from-palette($primary-palette, default-contrast),
+        --hxp-text-button-disabled: mat.get-color-from-palette($accent-palette, 500),
+        --hxp-primary-button-not-disabled-color: mat.get-color-from-palette($primary-palette, default-contrast),
+        --hxp-primary-button-not-disabled-background-color: mat.get-color-from-palette($primary-palette, default),
+        --hxp-primary-button-disabled-color: mat.get-color-from-palette($accent-palette, 500),
+        --hxp-primary-button-disabled-background-color: mat.get-color-from-palette($accent-palette, 200),
+        --hxp-secondary-button-not-disabled-color: mat.get-color-from-palette($primary-palette, default),
+        --hxp-secondary-button-not-disabled-background-color: mat.get-color-from-palette($primary-palette, default-contrast),
+        --hxp-secondary-button-disabled-color: mat.get-color-from-palette($accent-palette, 500),
+    );
+    :root {
+        @each $name, $value in $defaults {
+            #{$name}: #{$value};
+        }
+    }
+}
+
+@include hxp-button-variables;
+
+body {
+    .adf-start-process-cloud-actions {
+        /* stylelint-disable-next-line */
+        #cancel_process {
+            @include hxp-buttons.hxp-text-button-not-disabled;
+        }
+        /* stylelint-disable-next-line */
+        #cancel_process:disabled {
+            @include hxp-buttons.hxp-text-button-disabled;
+        }
+        .adf-btn-start {
+            @include hxp-buttons.hxp-primary-button-not-disabled;
+        }
+        .adf-btn-start:disabled {
+            @include hxp-buttons.hxp-primary-button-disabled;
+        }
+    }
+    .adf-form-mat-card-actions {
+        #adf-form-save,
+        /* stylelint-disable-next-line */
+        #adf-form-new_outcome,
+        #adf-cloud-cancel-task,
+        .adf-user-task-cloud-claim-btn,
+        .adf-user-task-cloud-unclaim-btn {
+            @include hxp-buttons.hxp-text-button-not-disabled;
+        }
+
+        #adf-form-save:disabled,
+        /* stylelint-disable-next-line */
+        #adf-form-new_outcome:disabled,
+        #adf-cloud-cancel-task:disabled,
+        .adf-user-task-cloud-claim-btn:disabled,
+        .adf-user-task-cloud-unclaim-btn:disabled {
+            @include hxp-buttons.hxp-text-button-disabled;
+        }
+
+        #adf-form-complete {
+            @include hxp-buttons.hxp-primary-button-not-disabled;
+        }
+        #adf-form-complete:disabled {
+            @include hxp-buttons.hxp-primary-button-disabled;
+        }
+    }
+}

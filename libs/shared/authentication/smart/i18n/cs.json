@@ -1,0 +1,23 @@
+{
+  "SHARED_AUTHENTICATION": {
+    "DETAILS": {
+      "USERNAME": "Uživatelské jméno",
+      "PASSWORD": "Heslo",
+      "TOKEN": "Token",
+      "CLIENT_ID": "ID klienta",
+      "CLIENT_SECRET": "Tajný klíč klienta",
+      "ENDPOINT": "Koncový bod",
+      "SCOPE": "Rozsah"
+    },
+    "ERRORS": {
+      "REQUIRED": "Toto pole je povinné",
+      "URL_ERROR": "Tato adresa URL není platná",
+      "SCOPE_ERROR": "Jsou povoleny pouze znaky oddělené čárkou",
+      "INVALID_FIELD": "Pole je neplatné"
+    },
+    "HINTS": {
+      "HIDE_PASSWORD": "Skrýt heslo",
+      "SCOPE_HINT": "Např. openId, e-mail..."
+    }
+  }
+}

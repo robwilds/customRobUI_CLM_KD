@@ -1,0 +1,45 @@
+{
+    "EXTRACTION": {
+        "VERIFICATION": {
+            "TASK_HEADER": {
+                "TITLE": "Revisar valores de campo extraídos del documento",
+                "REMAINING_ISSUES": "problemas que resolver",
+                "ALL_RESOLVED": "Todos resueltos",
+                "BACK_LABEL": "Volver a tareas",
+                "TASK_NAME": "Nombre de la tarea",
+                "TASK_NAME_VALUE": "Verificación de documento",
+                "DOCUMENT_CLASSES": "Clases de documentos",
+                "TOTAL_DOCUMENTS": "Total de documentos",
+                "TOTAL_PAGES": "Total de páginas",
+                "CONTENT_TYPE": "Tipo de contenido"
+            },
+            "SUBMIT_BUTTON": "Enviar",
+            "SUBMIT_WITH_ISSUE_BUTTON": "Enviar con problema",
+            "METADATA_PANEL": {
+                "TITLE": "Metadatos",
+                "REJECT_DOCUMENT_LINK": "Rechazar documento",
+                "CLEAR_ISSUE_LINK": "Borrar problema"
+            },
+            "METADATA_FIELD_VALIDATOR": {
+                "REQUIRED": "Campo obligatorio",
+                "INVALID_INTEGER": "El campo debe ser un número"
+            },
+            "EXTRACTION_RESULT": {
+                "EXTRACTION_ISSUE": "Problema de extracción",
+                "EXTRACTED_SUCCESSFULLY": "Extraído correctamente",
+                "VERIFIED": "Verificado",
+                "NOT_VERIFIED": "No verificado"
+            },
+            "NOTIFICATIONS": {
+                "SCREEN_LOAD_ERROR": "No se pudieron cargar los datos de la pantalla",
+                "TASK_ACTION_ERROR": "No se pudo guardar o enviar la tarea",
+                "TASK_CLAIM_ERROR": "Error al reclamar la tarea",
+                "TASK_UNCLAIM_ERROR": "Error al anular la reclamación de la tarea"
+            },
+            "TASK_ACTIONS": {
+                "SAVE": "Guardar",
+                "SUBMIT": "Enviar"
+            }
+        }
+    }
+}

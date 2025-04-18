@@ -1,0 +1,24 @@
+<div class="idp-extraction-view" tabindex="0">
+    <hyland-idp-task-header class="idp-header" />
+    <div class="idp-viewer-content">
+        <hyland-idp-extraction-metadata-panel class="idp-metadata-panel"
+            [ocrWords]="currentPageOcrWords$ | async"
+            (fieldValuePending)="fieldValuePending.next($event)" />
+        <hyland-idp-viewer class="idp-viewer"
+            [datasource]="(viewerDatasource$ | async)"
+            [configuration]="viewerConfiguration"
+            (viewerEvent)="viewerEvent$.emit($event)"
+        >
+            @if (showTextLayer) {
+                <ng-template hylandIdpViewerContentLayer="TextSuperImposed" let-host="host">
+                    <hyland-idp-viewer-text-layer
+                        [host]="host"
+                        [autoNavigationToHighlight]="true"
+                        [activeHighlights]="viewerHighlights"
+                        (textSelected)="viewerTextSelected.emit($event)"
+                    />
+                </ng-template>
+            }
+        </hyland-idp-viewer>
+    </div>
+</div>

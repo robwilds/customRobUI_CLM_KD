@@ -1,0 +1,65 @@
+<div id="metadata-container" *ngIf="document$ | async as document">
+    <div class="idp-header">
+        <button
+            mat-icon-button
+            [disabled]="!canUndo()"
+            (click)="onUndo()"
+            data-automation-id="idp-field-undo-button"
+        >
+            <mat-icon>undo</mat-icon>
+        </button>
+        <button
+            mat-icon-button
+            [disabled]="!canRedo()"
+            (click)="onRedo()"
+            data-automation-id="idp-field-redo-button"
+        >
+            <mat-icon>redo</mat-icon>
+        </button>
+
+        <div class="idp-spacer"></div>
+        <button
+            mat-flat-button class="idp-reject-document"
+            (click)="openRejectDocumentDialog()"
+            data-automation-id="idp-field-reject-button"
+        >
+            <mat-icon class="idp-reject-document-icon">warning_amber</mat-icon>
+            <span class="idp-reject-document-text">
+            {{ 'EXTRACTION.VERIFICATION.METADATA_PANEL.REJECT_DOCUMENT_LINK' | translate }}</span>
+        </button>
+    </div>
+    <h1 class="idp-title">{{ 'EXTRACTION.VERIFICATION.METADATA_PANEL.TITLE' | translate }}</h1>
+    <form>
+        <div class="idp-fields-container">
+            <div
+                *ngFor="let field of document.fields; trackBy: trackField; let i = index"
+                class="idp-form-field form-field-{{ field.id }}"
+                [id]="field.id"
+                [ngClass]="{ 'idp-has-issue': field.hasIssue, 'idp-is-selected': field.isSelected }"
+                [attr.data-automation-id]="'field-has-issue' + field.id"
+            >
+                <mat-form-field floatLabel="always">
+                    <mat-label class="idp-form-field-label">{{ field.name }}</mat-label>
+                    <input
+                        matInput
+                        #metadataInput
+                        cdkFocusInitial
+                        [id]="field.id"
+                        [attr.aria-label]="field.name"
+                        class="idp-form-field-input"
+                        [ngClass]="{ 'idp-has-issue': field.hasIssue }"
+                        [type]="field.dataType"
+                        [name]="field.id"
+                        [value]="field.value ?? ''"
+                        [attr.data-automation-id]="'idp-field-' + field.id"
+                        (keydown)="onFieldKeyDown($event, field, metadataInput.value)"
+                        (focus)="onFieldFocus(field)"
+                        (input)="onFieldInput(field, metadataInput)"
+                        (focusout)="onFieldFocusOut(field, metadataInput.value)"
+                    />
+                </mat-form-field>
+                <hyland-idp-extraction-result [attr.data-automation-id]="'idp-field-extraction-result-' + field.id" class="idp-extraction-result" [field]="field" />
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,19 @@
+<div class="idp-header-toolbar">
+    <div class="idp-header-toolbar-issues">
+        <span class="idp-header-toolbar-issues-header">{{ 'IDP_CLASS_VERIFICATION.CLASS_LIST_HEADER.SHOW_ISSUES_LABEL' | translate }}</span>
+        <span class="idp-header-toolbar-issues-toggle" [matTooltip]="issuesOnlyFilterTooltip">
+            <mat-slide-toggle data-automation-id="show-issue-toggle" #issueFilter [checked]="isIssuesOnlyView" (change)="onIssuesFilterChange($event.checked)"
+                color="primary" />
+        </span>
+    </div>
+    <ng-container *ngFor="let item of toolbarActionItems$ | async" class="idp-header-toolbar-button-container">
+        <ng-container *ngIf="item.renderType === 'dynamic' && item.displayOn === 'header'">
+            <div [ngClass]="{'idp-disabled': item.disabled}" matRipple [matRippleDisabled]="item.disabled || false">
+                <button mat-icon-button [disabled]="item.disabled" (click)="item.onClick$.next()"
+                    [matTooltip]="item.tooltip">
+                    <mat-icon>{{ item.icon }}</mat-icon>
+                </button>
+            </div>
+        </ng-container>
+    </ng-container>
+</div>

@@ -1,0 +1,162 @@
+<form>
+    <mat-form-field
+        [floatLabel]="'auto'"
+        class="ama-identity-people"
+        [class.adf-invalid]="hasError() && isDirty()"
+        [class.adf-readonly]="isReadonly()"
+    >
+        <mat-label *ngIf="!isReadonly()" id="ama-identity-people-title-id">
+            {{ title | translate }}
+        </mat-label>
+        <mat-chip-grid
+            #userMultipleChipList
+            [disabled]="isReadonly() || isValidationLoading()"
+            data-automation-id="ama-identity-people-chip-list"
+        >
+            <mat-chip-row
+                *ngFor="let user of selectedUsers"
+                [removable]="!(user.readonly)"
+                [attr.data-automation-id]="'ama-identity-people-chip-' + user.username"
+                (removed)="onRemove(user)"
+                matTooltip="{{includeEmail && user.email ? user.email : ''}}{{includeEmail && user.email ? '\n' : ''}}{{ (user.readonly ? 'SHARED_IDENTITY.PEOPLE.MANDATORY' : '') | translate }}"
+                matTooltipClass="ama-identity-people-tooltip"
+            >
+                {{user | sharedIdentityFullName:false}}
+                <mat-icon
+                    matChipRemove
+                    *ngIf="!(user.readonly || readOnly)"
+                    [attr.data-automation-id]="'ama-identity-people-chip-remove-icon-' + user.username"
+                >
+                    cancel
+                </mat-icon>
+            </mat-chip-row>
+            <input
+                matInput
+                [formControl]="searchUserCtrl"
+                [matAutocomplete]="auto"
+                [matChipInputFor]="userMultipleChipList"
+                (focus)="setFocus(true)"
+                (blur)="setFocus(false); markAsTouched()"
+                class="ama-identity-people-input"
+                data-automation-id="ama-identity-people-search-input"
+                #userInput
+            />
+        </mat-chip-grid>
+
+        <mat-autocomplete
+            autoActiveFirstOption
+            class="ama-identity-people-list"
+            #auto="matAutocomplete"
+            (optionSelected)="onSelect($event.option.value)"
+            [displayWith]="getDisplayName"
+        >
+            <ng-container *ngIf="(searchUsers$ | async)?.length else noResults">
+                <mat-option
+                    *ngFor="let user of searchUsers$ | async; let i = index"
+                    [value]="user"
+                >
+                    <div
+                        class="ama-identity-people-row"
+                        id="ama-identity-people-user-{{user.username}}"
+                        data-automation-id="ama-identity-people-row"
+                    >
+                        <div
+                            [outerHTML]="user | usernameInitials:'ama-identity-people-pic'"
+                        ></div>
+                        <span class="adf-people-label-name">
+                            {{user | sharedIdentityFullName}}</span
+                        >
+                    </div>
+                </mat-option>
+            </ng-container>
+            <ng-template #noResults>
+                <mat-option
+                    *ngIf="searchUserCtrl.hasError('searchTypingError') && !searchLoading"
+                    disabled
+                    class="ama-identity-people-option-not-active"
+                    data-automation-id="ama-identity-people-no-results"
+                >
+                    <span>
+                        {{ 'SHARED_IDENTITY.PEOPLE.ERROR.NOT_FOUND' | translate
+                        : { userName: searchedValue } }}</span
+                    >
+                </mat-option>
+            </ng-template>
+        </mat-autocomplete>
+    </mat-form-field>
+    <mat-progress-bar *ngIf="validationLoading" mode="indeterminate" data-automation-id="identity-people-progress-bar">
+    </mat-progress-bar>
+
+    <div class="adf-error-container">
+        <mat-error
+            *ngIf="isHxpAdminApp && hasPreselectError() && !isValidationLoading()"
+            [@transitionMessages]="subscriptAnimationState"
+            class="adf-error"
+        >
+            <div class="adf-error-text">
+                {{ 'SHARED_IDENTITY.PEOPLE.ERROR.INVALID_PRESELECTED_USER' | translate : {
+                userName : validateUsersMessage } }}
+            </div>
+        </mat-error>
+        <mat-error
+            *ngIf="!isHxpAdminApp && hasPreselectError() && !isValidationLoading()"
+            [@transitionMessages]="subscriptAnimationState"
+            class="adf-error"
+        >
+            <div class="adf-error-text">
+                {{ 'SHARED_IDENTITY.PEOPLE.ERROR.NOT_FOUND' | translate : {
+                userName : validateUsersMessage } }}
+            </div>
+        </mat-error>
+        <mat-error
+            *ngIf="searchUserCtrl.hasError('pattern')"
+            [@transitionMessages]="subscriptAnimationState"
+            class="adf-error"
+        >
+            <div class="adf-error-text">
+                {{ 'SHARED_IDENTITY.PEOPLE.ERROR.INVALID_PATTERN' | translate: {
+                pattern: getValidationPattern() } }}
+            </div>
+        </mat-error>
+        <mat-error
+            *ngIf="searchUserCtrl.hasError('maxlength')"
+            [@transitionMessages]="subscriptAnimationState"
+            class="adf-error"
+        >
+            <div class="adf-error-text">
+                {{ 'SHARED_IDENTITY.PEOPLE.ERROR.INVALID_MAX_LENGTH' |
+                translate: { requiredLength: getValidationMaxLength() } }}
+            </div>
+        </mat-error>
+        <mat-error
+            *ngIf="searchUserCtrl.hasError('minlength')"
+            [@transitionMessages]="subscriptAnimationState"
+            class="adf-error"
+        >
+            <div class="adf-error-text">
+                {{ 'SHARED_IDENTITY.PEOPLE.ERROR.INVALID_MIN_LENGTH' |
+                translate: { requiredLength: getValidationMinLength() } }}
+            </div>
+        </mat-error>
+        <mat-error
+            *ngIf="(searchUserCtrl.hasError('required') || userChipsCtrl.hasError('required')) && isDirty()"
+            [@transitionMessages]="subscriptAnimationState"
+            class="adf-error"
+        >
+            <div class="adf-error-text">
+                {{ 'SHARED_IDENTITY.PEOPLE.ERROR.REQUIRED' | translate }}
+            </div>
+        </mat-error>
+        <mat-error
+            *ngIf="searchUserCtrl.hasError('searchTypingError') && !this.isFocused"
+            [@transitionMessages]="subscriptAnimationState"
+            data-automation-id="invalid-users-typing-error"
+            class="adf-error"
+        >
+            <div class="adf-error-text">
+                {{ 'SHARED_IDENTITY.PEOPLE.ERROR.NOT_FOUND' | translate : {
+                userName : searchedValue } }}
+            </div>
+        </mat-error>
+    </div>
+</form>

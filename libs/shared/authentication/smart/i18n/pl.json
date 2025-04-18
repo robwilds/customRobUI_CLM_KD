@@ -1,0 +1,24 @@
+{
+    "SHARED_AUTHENTICATION": {
+        "DETAILS": {
+            "USERNAME": "Nazwa użytkownika",
+            "PASSWORD": "Hasło",
+            "TOKEN": "Token",
+            "CLIENT_ID": "Identyfikator klienta",
+            "CLIENT_SECRET": "Klucz tajny klienta",
+            "ENDPOINT": "Punkt końcowy",
+            "SCOPE": "Zakres",
+            "GRANT_TYPE": "Typ przyznania"
+        },
+        "ERRORS": {
+            "REQUIRED": "To pole jest wymagane",
+            "URL_ERROR": "Ten adres URL jest nieprawidłowy",
+            "SCOPE_ERROR": "Tylko dozwolone znaki, rozdzielone przecinkami",
+            "INVALID_FIELD": "Pole jest nieprawidłowe"
+        },
+        "HINTS": {
+            "HIDE_PASSWORD": "Ukryj hasło",
+            "SCOPE_HINT": "Np. otwarty identyfikator, adres e-mail..."
+        }
+    }
+}

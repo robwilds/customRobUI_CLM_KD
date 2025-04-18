@@ -1,0 +1,16 @@
+{
+    "CUSTOM_MODELED_EXTENSION": {
+        "SNACKBAR": {
+            "BACKEND_SERVICE_ERROR": "Errore di rete sconosciuto. Le funzioni relative ad Process Automation sono disabilitate.",
+            "NO_PROCESS_DEFINITION_ERROR": "Non vi sono definizioni di processo con la chiave specificata",
+            "PROCESS_CREATED_SUCCESSFULLY": "Istanza di processo creata correttamente",
+            "FORM_SUBMITTED_SUCCESSFULLY": "Modulo inviato correttamente",
+            "ACTION_PERFORMED_SUCCESSFULLY": "Azione eseguita correttamente",
+            "CAN_NOT_ATTACH": "Impossibile allegare il contenuto selezionato"
+        },
+        "FORM_ACTION": {
+            "CANCEL": "Annulla",
+            "SUBMIT": "Invia"
+        }
+    }
+}

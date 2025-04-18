@@ -1,0 +1,16 @@
+<div class="idp-single-page-view" #singlePageView [style.transform]="'scale(' + currentScaleFactor + ')'" [style.transformOrigin]="transformOrigin">
+    <ng-container *ngFor="let imageData of displayImages$ | async; trackBy: pageUniquenessFn">
+        <div class="idp-single-page-view__image-container" [style.rotate.deg]="imageRotation$ | async">
+            <ng-container
+                *ngTemplateOutlet="
+                    imageTemplate;
+                    context: {
+                        imageData,
+                        imageRotation: imageRotation$ | async,
+                        layoutInfo
+                    }
+                "
+            />
+        </div>
+    </ng-container>
+</div>

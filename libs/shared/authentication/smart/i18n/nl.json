@@ -1,0 +1,23 @@
+{
+  "SHARED_AUTHENTICATION": {
+    "DETAILS": {
+      "USERNAME": "Gebruikersnaam",
+      "PASSWORD": "Wachtwoord",
+      "TOKEN": "Token",
+      "CLIENT_ID": "Client-id",
+      "CLIENT_SECRET": "Clientgeheim",
+      "ENDPOINT": "Eindpunt",
+      "SCOPE": "Bereik"
+    },
+    "ERRORS": {
+      "REQUIRED": "Dit veld is vereist",
+      "URL_ERROR": "Deze URL is niet geldig",
+      "SCOPE_ERROR": "Alleen tekens toegestaan met komma als scheidingsteken",
+      "INVALID_FIELD": "Veld is ongeldig"
+    },
+    "HINTS": {
+      "HIDE_PASSWORD": "Wachtwoord verbergen",
+      "SCOPE_HINT": "Bijv. openId,e-mail..."
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<adf-toolbar>
+    <hxp-selected-item-count [selectedItems]="selection"></hxp-selected-item-count>
+    <div class="adf-toolbar--spacer"></div>
+    <hxp-content-properties-viewer-button [actionContext]="actionContext"></hxp-content-properties-viewer-button>
+    <hxp-content-delete [actionContext]="actionContext"></hxp-content-delete>
+    <hxp-single-item-download [actionContext]="actionContext"></hxp-single-item-download>
+    <hxp-single-file-share [actionContext]="actionContext"></hxp-single-file-share>
+    <hxp-manage-column-button [actionContext]="actionContext"></hxp-manage-column-button>
+    <hxp-document-more-action
+        [actionContext]="actionContext"
+        [menuItems]="moreMenu$ | async"
+    ></hxp-document-more-action>
+</adf-toolbar>

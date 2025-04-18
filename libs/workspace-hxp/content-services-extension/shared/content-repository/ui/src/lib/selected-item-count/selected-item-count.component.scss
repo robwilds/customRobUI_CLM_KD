@@ -1,0 +1,16 @@
+.hxp-document-list-count {
+    display: flex;
+    font-size: 15px;
+}
+.hxp-clear-selection button {
+    background: transparent;
+    border: 0;
+    color: var(--theme-primary-color);
+    font-size: 15px;
+    cursor: pointer;
+}
+.hxp-item-count-separator {
+    width: 1px;
+    background: var(--adf-theme-foreground-text-color-054);
+    margin: 0 12px;
+}

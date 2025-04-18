@@ -1,0 +1,16 @@
+{
+    "CUSTOM_MODELED_EXTENSION": {
+        "SNACKBAR": {
+            "BACKEND_SERVICE_ERROR": "Une erreur réseau inconnue est survenue. Les fonctionnalités d'Process Automation sont désactivées.",
+            "NO_PROCESS_DEFINITION_ERROR": "Aucune définition de processus avec la clé spécifiée n'a été trouvée",
+            "PROCESS_CREATED_SUCCESSFULLY": "L'instance de processus a bien été créée",
+            "FORM_SUBMITTED_SUCCESSFULLY": "Le formulaire a bien été envoyé",
+            "ACTION_PERFORMED_SUCCESSFULLY": "L'action a bien été effectuée",
+            "CAN_NOT_ATTACH": "Impossible de joindre le contenu sélectionné"
+        },
+        "FORM_ACTION": {
+            "CANCEL": "Annuler",
+            "SUBMIT": "Envoyer"
+        }
+    }
+}

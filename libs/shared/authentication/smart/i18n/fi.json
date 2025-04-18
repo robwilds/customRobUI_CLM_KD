@@ -1,0 +1,23 @@
+{
+  "SHARED_AUTHENTICATION": {
+    "DETAILS": {
+      "USERNAME": "Käyttäjänimi",
+      "PASSWORD": "Salasana",
+      "TOKEN": "Tunnus",
+      "CLIENT_ID": "Asiakastunnus",
+      "CLIENT_SECRET": "Asiakkaan salaisuus",
+      "ENDPOINT": "Päätepiste",
+      "SCOPE": "Laajuus"
+    },
+    "ERRORS": {
+      "REQUIRED": "Tämä kenttä on pakollinen",
+      "URL_ERROR": "Virheellinen web-osoite",
+      "SCOPE_ERROR": "Ainoastaan pilkkuerotellut merkit hyväksytään",
+      "INVALID_FIELD": "Kenttä on virheellinen"
+    },
+    "HINTS": {
+      "HIDE_PASSWORD": "Piilota salasana",
+      "SCOPE_HINT": "Esim. avointunnus, sähköposti"
+    }
+  }
+}

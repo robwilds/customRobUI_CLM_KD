@@ -1,0 +1,16 @@
+{
+  "CUSTOM_MODELED_EXTENSION": {
+    "SNACKBAR": {
+      "BACKEND_SERVICE_ERROR": "Došlo k neznámé chybě sítě. Funkce související s aplikací Process Automation jsou zakázány.",
+      "NO_PROCESS_DEFINITION_ERROR": "Definice procesu se zadaným klíčem neexistuje",
+      "PROCESS_CREATED_SUCCESSFULLY": "Instance procesu byla úspěšně vytvořena",
+      "FORM_SUBMITTED_SUCCESSFULLY": "Formulář byl úspěšně odeslán",
+      "ACTION_PERFORMED_SUCCESSFULLY": "Akce byla provedena úspěšně",
+      "CAN_NOT_ATTACH": "Nelze připojit vybraný obsah"
+    },
+    "FORM_ACTION": {
+      "CANCEL": "Zrušit",
+      "SUBMIT": "Odeslat"
+    }
+  }
+}

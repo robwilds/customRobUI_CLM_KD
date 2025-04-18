@@ -1,0 +1,33 @@
+adf-layout-header {
+    &.hxp-custom-header-color {
+        .adf-toolbar-container-row {
+            color: var(--adf-header-text-color) !important;
+
+            .adf-userinfo-menu_button {
+                color: var(--theme-primary-color-default-contrast) !important;
+            }
+        }
+    }
+
+    .adf-toolbar-container-row {
+        .adf-menu-icon {
+            margin-top: -3px !important;
+        }
+
+        .adf-app-logo {
+            margin-top: 5px !important;
+        }
+    }
+
+    .hxp-header-logo {
+        display: flex;
+        border-right: 1px solid var(--studio-header-user-initials-background-color);
+        padding-right: 18px;
+        margin-right: 32px;
+
+        img {
+            width: 76px;
+            height: 25px;
+        }
+    }
+}

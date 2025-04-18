@@ -1,0 +1,100 @@
+@use 'mat-selectors' as ms;
+@use '@hylandsoftware/design-tokens/scss' as *;
+
+@mixin adf-toasts {
+    .hxp-snack-bar-container {
+        #{ms.$mat-snackbar-surface} {
+            background-color: $hy-colors-background-base;
+            border: $hy-border-width-30;
+            border-style: solid;
+            font-weight: $hy-font-weights-bold;
+            border-radius: 10px;
+            min-width: 240px;
+            max-width: none;
+
+            #{ms.$mat-mdc-snack-bar-label} {
+                color: $hy-colors-text-default;
+            }
+        }
+
+        background-color: $hy-colors-background-base;
+        border:  $hy-border-width-30;
+        border-style: solid;
+        font-weight: $hy-font-weights-bold;
+        border-radius: 10px;
+        min-width: 240px;
+        max-width: none;
+
+        #{ms.$mat-mdc-snack-bar-label} {
+            color: $hy-colors-text-default;
+        }
+
+
+        &.hxp-snack-bar-type-error {
+            #{ms.$mat-snackbar-surface} {
+                border-color: var(--theme-warn-color);
+
+                .adf-snackbar-message-content #{ms.$mat-icon} {
+                    color: var(--theme-warn-color);
+                }
+            }
+        }
+
+        &.hxp-snack-bar-type-done {
+            #{ms.$mat-snackbar-surface} {
+                border-color: $hy-colors-icon-success;
+
+                .adf-snackbar-message-content #{ms.$mat-icon} {
+                    color: $hy-colors-icon-success;
+                }
+            }
+
+            border-color: $hy-colors-icon-success;
+
+            .adf-snackbar-message-content #{ms.$mat-icon} {
+                color: $hy-colors-icon-success;
+            }
+        }
+
+        &.hxp-snack-bar-type-info {
+            #{ms.$mat-snackbar-surface} {
+                border-color: var(--theme-primary-color);
+
+                .adf-snackbar-message-content #{ms.$mat-icon} {
+                    color: var(--theme-primary-color);
+                }
+            }
+        }
+    }
+
+    .adf-error-snackbar,
+    .adf-warning-snackbar,
+    .adf-info-snackbar {
+        border-radius: 8px;
+    }
+
+    .adf-error-snackbar,
+    .adf-info-snackbar {
+        .adf-snackbar-message-content-action-icon {
+            color: var(--theme-text-white);
+        }
+    }
+
+    .adf-warning-snackbar {
+        .adf-snackbar-message-content-action-icon {
+            color: var(--theme-hy-text-black);
+        }
+    }
+
+    .adf-info-snackbar {
+        #{ms.$mat-snackbar-surface} {
+            background-color: var(--theme-primary-color);
+        }
+    }
+
+    .adf-error-snackbar {
+        #{ms.$mat-snackbar-surface} {
+            background-color: var(--theme-warn-color);
+        }
+    }
+}

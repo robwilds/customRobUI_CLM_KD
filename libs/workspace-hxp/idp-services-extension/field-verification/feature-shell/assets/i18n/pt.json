@@ -1,0 +1,45 @@
+{
+    "EXTRACTION": {
+        "VERIFICATION": {
+            "TASK_HEADER": {
+                "TITLE": "Rever os valores dos campos extraídos do documento",
+                "REMAINING_ISSUES": "problemas a resolver",
+                "ALL_RESOLVED": "Tudo resolvido",
+                "BACK_LABEL": "Voltar a Tarefas",
+                "TASK_NAME": "Nome da tarefa",
+                "TASK_NAME_VALUE": "Verificação do documento",
+                "DOCUMENT_CLASSES": "Classes de documento",
+                "TOTAL_DOCUMENTS": "Total de documentos",
+                "TOTAL_PAGES": "Total de páginas",
+                "CONTENT_TYPE": "Tipo de conteúdo"
+            },
+            "SUBMIT_BUTTON": "Enviar",
+            "SUBMIT_WITH_ISSUE_BUTTON": "Enviar com problema",
+            "METADATA_PANEL": {
+                "TITLE": "Metadados",
+                "REJECT_DOCUMENT_LINK": "Rejeitar documento",
+                "CLEAR_ISSUE_LINK": "Limpar problema"
+            },
+            "METADATA_FIELD_VALIDATOR": {
+                "REQUIRED": "O campo é obrigatório",
+                "INVALID_INTEGER": "O campo tem de ser um número"
+            },
+            "EXTRACTION_RESULT": {
+                "EXTRACTION_ISSUE": "Problema de extração",
+                "EXTRACTED_SUCCESSFULLY": "Extraído com sucesso",
+                "VERIFIED": "Verificado",
+                "NOT_VERIFIED": "Não verificado"
+            },
+            "NOTIFICATIONS": {
+                "SCREEN_LOAD_ERROR": "Falha ao carregar os dados do ecrã",
+                "TASK_ACTION_ERROR": "Falha ao Guardar ou Submeter a Tarefa",
+                "TASK_CLAIM_ERROR": "Falha a reclamar tarefa",
+                "TASK_UNCLAIM_ERROR": "Falha a não reclamar tarefa"
+            },
+            "TASK_ACTIONS": {
+                "SAVE": "Guardar",
+                "SUBMIT": "Enviar"
+            }
+        }
+    }
+}

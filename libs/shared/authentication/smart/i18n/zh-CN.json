@@ -1,0 +1,23 @@
+{
+  "SHARED_AUTHENTICATION": {
+    "DETAILS": {
+      "USERNAME": "用户名",
+      "PASSWORD": "密码",
+      "TOKEN": "令牌",
+      "CLIENT_ID": "客户端 ID",
+      "CLIENT_SECRET": "客户端密码",
+      "ENDPOINT": "终结点",
+      "SCOPE": "范围"
+    },
+    "ERRORS": {
+      "REQUIRED": "此字段为必填字段",
+      "URL_ERROR": "此 URL 无效",
+      "SCOPE_ERROR": "仅允许使用逗号分隔的字符",
+      "INVALID_FIELD": "字段无效"
+    },
+    "HINTS": {
+      "HIDE_PASSWORD": "隐藏密码",
+      "SCOPE_HINT": "例如 openId, 电子邮件..."
+    }
+  }
+}

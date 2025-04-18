@@ -1,0 +1,73 @@
+{
+  "version": 2,
+  "outputCapture": "direct-nodejs",
+  "$schema": "http://json-schema.org/schema",
+  "title": "Monorepo browser builder",
+  "description": "Angular browser builder facade with posthook capability",
+  "type": "object",
+  "properties": {
+    "action": {
+      "type": "string",
+      "description": "Define the docker action. In case of publish the docker build and publish is performed. In case of link a sourceTag is mandatory",
+      "enum": [
+        "publish",
+        "link"
+      ],
+      "default": "publish"
+    },
+    "sourceTag": {
+      "type": "string",
+      "description": "The sourceTag to which the link should be linked to"
+    },
+    "envVars": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "description": "Value env var",
+            "default": true
+          },
+          "name": {
+            "type": "string",
+            "description": "Name env var",
+            "default": true
+          }
+        }
+      },
+      "description": "Env variable to pass to the docker build"
+    },
+    "outputPath": {
+      "type": "string",
+      "description": "The path where the bundle is saved. Does not contains the dist prefix."
+    },
+    "repositoryDomain": {
+      "type": "string",
+      "description": "The domain of the docker repository."
+    },
+    "repositorySlug": {
+      "type": "string",
+      "description": "The name of the docker repository."
+    },
+    "tag": {
+      "type": "string",
+      "description": "The full path for the main entry point to the app, relative to the current workspace."
+    },
+    "file": {
+      "type": "string",
+      "description": "Docker file name."
+    },
+    "dryrun": {
+      "type": "boolean",
+      "description": "Simulate the command"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "tag",
+    "repositoryDomain",
+    "repositorySlug",
+    "outputPath"
+  ]
+}

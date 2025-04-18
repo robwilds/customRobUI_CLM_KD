@@ -1,0 +1,41 @@
+<ng-container *ngIf="!(screenLoading$ | async); else progressSpinner">
+    <div class="idp-class-verification-root idp-screens-root-container">
+        <div class="idp-header-container">
+            <hyland-idp-task-header />
+        </div>
+        <div class="idp-content-container">
+            <div class="idp-content-container__document-browser">
+                <hyland-idp-class-list />
+            </div>
+            <div class="idp-content-container__viewer">
+                <hyland-idp-class-verification-viewer />
+            </div>
+        </div>
+        <div class="idp-footer-container">
+            <button
+                mat-flat-button
+                color="primary"
+                class="idp-footer-container__submit-button"
+                [disabled]="!(taskCanComplete$ | async)"
+                (click)="onSubmit()"
+                data-automation-id="idp-class-submit-button"
+            >
+                {{ 'IDP_CLASS_VERIFICATION.TASK_ACTIONS.SUBMIT' | translate }}
+            </button>
+            <button
+                mat-flat-button color="primary"
+                class="idp-footer-container__save-button"
+                [disabled]="!(taskCanSave$ | async)"
+                (click)="onSave()"
+                data-automation-id="idp-class-save-button"
+            >
+                {{ 'IDP_CLASS_VERIFICATION.TASK_ACTIONS.SAVE' | translate }}
+            </button>
+        </div>
+    </div>
+</ng-container>
+<ng-template #progressSpinner>
+    <div class="idp-class-verification-root__progress">
+        <mat-progress-spinner color="primary" [mode]="'indeterminate'" />
+    </div>
+</ng-template>

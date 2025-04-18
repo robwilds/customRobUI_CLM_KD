@@ -1,0 +1,123 @@
+{
+    "IDP_CLASS_VERIFICATION": {
+        "TASK_HEADER": {
+            "TITLE": "Sprawdź dokumenty w partii",
+            "REMAINING_ISSUES": "problemy do rozwiązania",
+            "ALL_RESOLVED": "Wszystkie rozwiązane",
+            "BACK_LABEL": "Powrót do zadań",
+            "TASK_NAME": "Nazwa zadania",
+            "TASK_NAME_VALUE": "Weryfikacja partii",
+            "DOCUMENT_CLASSES": "Klasy dokumentów",
+            "TOTAL_DOCUMENTS": "Łączna liczba dokumentów",
+            "TOTAL_PAGES": "Łączna liczba stron"
+        },
+        "VIEWER": {
+            "TOOLBAR": {
+                "ASSIGN_DOCUMENT_CLASS": "Przypisz klasę dokumentu",
+                "ISSUE_LABEL": "Potencjalny problem: ",
+                "REJECT_LABEL": "Odrzuć",
+                "RESOLVE_LABEL": "Oznacz jako rozwiązany"
+            },
+            "EMPTY_VIEW": {
+                "DONE_TITLE": "TO TYLE!",
+                "DONE_DESCRIPTION": "Możesz już przesłać zadanie",
+                "SELECT_DOCUMENT": "Wybierz dokument"
+            },
+            "STICKY_ACTION": {
+                "OPEN_SHORTCUT_BROWSER_BUTTON_TOOLTIP": "Otwórz przeglądarkę skrótów"
+            }
+        },
+        "CLASS_LIST_HEADER": {
+            "SHOW_ISSUES_LABEL": "Pokaż tylko problemy",
+            "SHOW_ISSUES_TOOLTIP": "Pokaż tylko problemy"
+        },
+        "FLOATING_TOOLBAR": {
+            "EXPAND_BUTTON_TOOLTIP": "Rozwiń pasek narzędzi",
+            "COLLAPSE_BUTTON_TOOLTIP": "Zwiń pasek narzędzi"
+        },
+        "DOCUMENT_TOOLBAR": {
+            "UNDO": "Cofnij",
+            "REDO": "Ponów",
+            "CHANGE_CLASS": "Zmień klasę",
+            "SPLIT": "Podziel",
+            "MERGE": "Scal",
+            "DELETE": "Usuń",
+            "REJECT": "Odrzuć",
+            "MARK_RESOLVED": "Oznacz jako rozwiązany"
+        },
+        "CLASS_CHANGE_DIALOG": {
+            "TITLE": "Zmień klasę",
+            "SEARCH_PLACEHOLDER": "Wyszukaj klasę...",
+            "CANCEL_BUTTON": "Anuluj",
+            "SAVE_BUTTON": "Zmień klasę"
+        },
+        "DELETE_CONFIRMATION_DIALOG": {
+            "TITLE": "Potwierdź zmiany",
+            "DESCRIPTION": "Czy na pewno chcesz usunąć wybraną(-e) stronę(-y)?",
+            "CANCEL_BUTTON": "Anuluj",
+            "DELETE_BUTTON": "Usuń"
+        },
+        "SHORTCUTS": {
+            "SELECT_ALL_CONTEXT_ONLY": "Zaznacz wszystkie strony lub dokumenty",
+            "SELECT_ALL": "Zaznacz wszystkie strony i dokumenty w wybranej klasie",
+            "SELECT_ALL_UNTIL_START_CONTEXT_ONLY": "Zaznacz wszystkie elementy do pierwszego elementu wybranego typu",
+            "SELECT_ALL_UNTIL_END_CONTEXT_ONLY": "Zaznacz wszystkie elementy do ostatniego elementu wybranego typu",
+            "SELECT_ALL_UNTIL_START": "Zaznacz wszystkie elementy do pierwszego dokumentu",
+            "SELECT_ALL_UNTIL_END": "Zaznacz wszystkie elementy do ostatniego dokumentu",
+            "NAVIGATE_FIRST": "Przejdź do pierwszego dokumentu",
+            "NAVIGATE_END": "Przejdź do ostatniego dokumentu",
+            "NAVIGATE_FIRST_CONTEXT_ONLY": "Przejdź do pierwszego elementu",
+            "NAVIGATE_END_CONTEXT_ONLY": "Przejdź do ostatniego elementu",
+            "NAVIGATE_SELECT_UP": "Kontynuuj Zaznacz poprzedni element",
+            "NAVIGATE_SELECT_DOWN": "Kontynuuj Zaznacz następny element",
+            "NAVIGATE_UP": "Przejdź w górę",
+            "NAVIGATE_DOWN": "Przejdź w dół",
+            "NAVIGATE_TOP_CONTEXT_ONLY": "Przejdź do najwyższego elementu",
+            "NAVIGATE_BOTTOM_CONTEXT_ONLY": "Przejdź do najniższego elementu",
+            "COLLAPSE": "Zwiń do elementu nadrzędnego",
+            "NAVIGATE_PREV_CLASS": "Klasa poprzedniego dokumentu",
+            "NAVIGATE_NEXT_CLASS": "Klasa następnego dokumentu",
+            "TOGGLE_EXPAND_COLLAPSE": "Przełącz stan Rozwiń/Zwiń zaznaczonego elementu",
+            "PAGE_SPLIT": "Podziel stronę",
+            "PAGE_SPLIT_ALL_ABOVE": "Podziel wszystkie strony powyżej",
+            "PAGE_MERGE": "Scal stronę",
+            "PAGE_DELETE": "Usuń stronę",
+            "CHANGE_CLASS": "Zmień klasę wybranych dokumentów",
+            "ISSUE_ONLY_FILTER": "Przełącz filtr Tylko problem",
+            "UNDO": "Cofnij ostatnią akcję",
+            "REDO": "Wykonaj ponownie ostatnią akcję",
+            "DOCUMENT_REJECT": "Odrzuć dokument"
+        },
+        "USER_FEEDBACK": {
+            "PAGE_DELETE_SUCCESS_SINGULAR": "Liczba usuniętych stron: {{arg}}",
+            "PAGE_DELETE_SUCCESS_PLURAL": "Liczba usuniętych stron: {{arg}}",
+            "PAGE_DELETE_ERROR": "Nie udało się usunąć stron(y)",
+            "CHANGE_CLASS_SUCCESS_SINGULAR": "Wybrany dokument został przeniesiony do klasy dokumentu {{className}}",
+            "CHANGE_CLASS_SUCCESS_PLURAL": "Wybrane dokumenty zostały przeniesione do klasy dokumentów {{className}}",
+            "CHANGE_CLASS_ERROR": "Nie udało się przenieść stron(y) do innej klasy",
+            "PAGE_SPLIT_SUCCESS_SINGULAR": "Pomyślnie podzielono {{arg}}",
+            "PAGE_SPLIT_SUCCESS_PLURAL": "Liczba pomyślnie podzielonych stron: {{arg}}",
+            "PAGE_SPLIT_ERROR": "Nie udało się podzielić stron",
+            "PAGE_MERGE_SUCCESS": "Scalono {{pageCount}} stron(y) do dokumentu {{documentName}}",
+            "PAGE_MERGE_ERROR": "Nie udało się scalić stron",
+            "MOVE_PAGE_SUCCESS_SINGULAR": "{{arg}} przeniesiono pomyślnie",
+            "MOVE_PAGE_SUCCESS_PLURAL": "Przeniesiono pomyślnie {{arg}} stron(y)",
+            "MOVE_PAGE_ERROR": "Nie udało się przenieść stron",
+            "RESOLVE_SUCCESS": "Strony zostały oznaczone jako rozwiązane pomyślnie",
+            "RESOLVE_ERROR": "Nie udało się oznaczyć stron jako rozwiązanych",
+            "REJECT_SUCCESS": "Dokument został odrzucony",
+            "REJECT_ERROR": "Nie udało się odrzucić dokumentu"
+        },
+        "NOTIFICATIONS": {
+            "SCREEN_LOAD_ERROR_DOCUMENT_STRUCTURE": "Document structure not found in batch state input data",
+            "SCREEN_LOAD_ERROR_CONTENT_FILE_REFS": "Content file references not found in task input data",
+            "TASK_ACTION_ERROR": "Nie udało się zapisać lub przesłać zadania",
+            "TASK_CLAIM_ERROR": "Nie udało się przejąć zadania",
+            "TASK_UNCLAIM_ERROR": "Nie udało się cofnąć przejęcia zadania"
+        },
+        "TASK_ACTIONS": {
+            "SAVE": "Zapisz",
+            "SUBMIT": "Prześlij"
+        }
+    }
+}

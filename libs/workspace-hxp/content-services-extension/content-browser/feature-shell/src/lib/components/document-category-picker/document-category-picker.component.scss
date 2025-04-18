@@ -1,0 +1,16 @@
+@use '@hylandsoftware/design-tokens/scss' as *;
+@use 'mat-selectors' as ms;
+
+.hxp-document-category-picker {
+    display: flex;
+    flex-direction: column;
+    font-size: $hy-font-sizes-20;
+    #hxp-document-category-picker-select {
+        font-size: $hy-font-sizes-20;
+    }
+}
+
+.hxp-document-category-picker-required::after {
+    content: ' *';
+    color: $hy-colors-red-500;
+}

@@ -1,0 +1,16 @@
+{
+  "CUSTOM_MODELED_EXTENSION": {
+    "SNACKBAR": {
+      "BACKEND_SERVICE_ERROR": "Okänt nätverksfel inträffade. Funktioner relaterade till Process Automation har inaktiverats.",
+      "NO_PROCESS_DEFINITION_ERROR": "Det finns ingen processdefinition med den nyckel som angetts",
+      "PROCESS_CREATED_SUCCESSFULLY": "Processinstans skapades",
+      "FORM_SUBMITTED_SUCCESSFULLY": "Formuläret sparades",
+      "ACTION_PERFORMED_SUCCESSFULLY": "Åtgärd utfördes",
+      "CAN_NOT_ATTACH": "Kunde inte bifoga valt innehåll"
+    },
+    "FORM_ACTION": {
+      "CANCEL": "Avbryt",
+      "SUBMIT": "Skicka in"
+    }
+  }
+}

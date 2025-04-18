@@ -1,0 +1,16 @@
+{
+  "CUSTOM_MODELED_EXTENSION": {
+    "SNACKBAR": {
+      "BACKEND_SERVICE_ERROR": "Произошла неизвестная ошибка сети. Функции, связанные с Process Automation, отключены.",
+      "NO_PROCESS_DEFINITION_ERROR": "Определение процесса с предоставленным ключом отсутствует",
+      "PROCESS_CREATED_SUCCESSFULLY": "Экземпляр процесса успешно создан",
+      "FORM_SUBMITTED_SUCCESSFULLY": "Форма успешно отправлена",
+      "ACTION_PERFORMED_SUCCESSFULLY": "Действие успешно выполнено",
+      "CAN_NOT_ATTACH": "Не удалось прикрепить выбранное содержимое"
+    },
+    "FORM_ACTION": {
+      "CANCEL": "Отмена",
+      "SUBMIT": "Передать"
+    }
+  }
+}

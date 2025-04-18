@@ -1,0 +1,20 @@
+<div class="idp-viewer-text-only-layer__container-div" #containerTexOnly (contextmenu)="$event.preventDefault()">
+    <ng-container *ngIf="textContents$ | async as textContents; else spinner">
+        <ng-container *ngFor="let textContent of textContents; trackBy: textUniquenessFn">
+            <span
+                class="idp-viewer-text-only-layer__text"
+                [ngStyle]="{
+                    top: textContent.top + 'px',
+                    left: textContent.left + 'px',
+                    width: textContent.width + 'px',
+                    height: textContent.height + 'px',
+                    fontSize: $any(textContent.additionalData).fontSize + 'px'
+                }"
+                >{{ textContent.text }}</span
+            >
+        </ng-container>
+    </ng-container>
+    <ng-template #spinner>
+        <mat-spinner class="idp-text-only-spinner" diameter="30" />
+    </ng-template>
+</div>

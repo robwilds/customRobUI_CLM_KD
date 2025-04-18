@@ -1,0 +1,16 @@
+{
+  "CUSTOM_MODELED_EXTENSION": {
+    "SNACKBAR": {
+      "BACKEND_SERVICE_ERROR": "Det oppstod en ukjent nettverksfeil. Funksjoner knyttet til Process Automation er deaktivert.",
+      "NO_PROCESS_DEFINITION_ERROR": "Det er ingen prosessdefinisjon med den oppgitte nøkkelen",
+      "PROCESS_CREATED_SUCCESSFULLY": "Prosesstilfellet er opprettet",
+      "FORM_SUBMITTED_SUCCESSFULLY": "Skjemaet er sendt inn",
+      "ACTION_PERFORMED_SUCCESSFULLY": "Handlingen er utført",
+      "CAN_NOT_ATTACH": "Kan ikke legge ved det valgte innholdet"
+    },
+    "FORM_ACTION": {
+      "CANCEL": "Avbryt",
+      "SUBMIT": "Send inn"
+    }
+  }
+}

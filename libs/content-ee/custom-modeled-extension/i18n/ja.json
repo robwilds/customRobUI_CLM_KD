@@ -1,0 +1,16 @@
+{
+  "CUSTOM_MODELED_EXTENSION": {
+    "SNACKBAR": {
+      "BACKEND_SERVICE_ERROR": "不明なネットワークエラーが発生しました。Process Automation 関連の機能は無効化されています。",
+      "NO_PROCESS_DEFINITION_ERROR": "指定したキーのプロセス定義はありません",
+      "PROCESS_CREATED_SUCCESSFULLY": "プロセスインスタンスが作成されました",
+      "FORM_SUBMITTED_SUCCESSFULLY": "フォームが送信されました",
+      "ACTION_PERFORMED_SUCCESSFULLY": "処理が実行されました",
+      "CAN_NOT_ATTACH": "選択したコンテンツは添付できません"
+    },
+    "FORM_ACTION": {
+      "CANCEL": "キャンセル",
+      "SUBMIT": "送信"
+    }
+  }
+}

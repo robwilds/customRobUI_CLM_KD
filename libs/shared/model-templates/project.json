@@ -1,0 +1,44 @@
+{
+    "name": "shared-model-templates",
+    "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+    "projectType": "library",
+    "sourceRoot": "libs/shared/model-templates/src",
+    "prefix": "alfresco-dbp",
+    "targets": {
+        "build": {
+            "executor": "@nx/angular:ng-packagr-lite",
+            "outputs": ["{workspaceRoot}/dist/libs/shared/model-templates"],
+            "options": {
+                "project": "libs/shared/model-templates/ng-package.json"
+            },
+            "configurations": {
+                "production": {
+                    "tsConfig": "libs/shared/model-templates/tsconfig.lib.prod.json"
+                },
+                "development": {
+                    "tsConfig": "libs/shared/model-templates/tsconfig.lib.json"
+                },
+                "adf": {
+                    "tsConfig": "libs/shared/model-templates/tsconfig.lib.adf.json"
+                }
+            },
+            "defaultConfiguration": "production"
+        },
+        "test": {
+            "executor": "@nx/jest:jest",
+            "options": {
+                "jestConfig": "{projectRoot}/jest.config.ts",
+                "passWithNoTests": false
+            },
+            "configurations": {
+                "adf": {
+                    "jestConfig": "{projectRoot}/jest.adf.config.ts",
+                    "codeCoverage": false,
+                    "silent": true
+                }
+            }
+        },
+        "lint": {}
+    },
+    "tags": ["scope:shared-model-templates", "category:shared-model-templates", "category:shared-unit"]
+}

@@ -1,0 +1,16 @@
+{
+  "CUSTOM_MODELED_EXTENSION": {
+    "SNACKBAR": {
+      "BACKEND_SERVICE_ERROR": "Tapahtui tuntematon verkkovirhe. Process Automation -sovellukseen liittyvät ominaisuudet ovat poissa käytöstä.",
+      "NO_PROCESS_DEFINITION_ERROR": "Annetulle avaimelle ei löydy prosessimääritelmää",
+      "PROCESS_CREATED_SUCCESSFULLY": "Prosessiesiintymä luotiin",
+      "FORM_SUBMITTED_SUCCESSFULLY": "Lomake lähetettiin",
+      "ACTION_PERFORMED_SUCCESSFULLY": "Toiminto suoritettiin",
+      "CAN_NOT_ATTACH": "Valitun sisällön liittäminen epäonnistui"
+    },
+    "FORM_ACTION": {
+      "CANCEL": "Peruuta",
+      "SUBMIT": "Lähetä"
+    }
+  }
+}

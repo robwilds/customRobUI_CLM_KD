@@ -1,0 +1,45 @@
+{
+    "EXTRACTION": {
+        "VERIFICATION": {
+            "TASK_HEADER": {
+                "TITLE": "Überprüfung der aus dem Dokument extrahierten Feldwerte",
+                "REMAINING_ISSUES": "zu lösende Probleme",
+                "ALL_RESOLVED": "Alle gelöst",
+                "BACK_LABEL": "Zurück zu Aufgaben",
+                "TASK_NAME": "Aufgabenname",
+                "TASK_NAME_VALUE": "Dokumentenüberprüfung",
+                "DOCUMENT_CLASSES": "Dokumentklassen",
+                "TOTAL_DOCUMENTS": "Gesamtzahl Dokumente",
+                "TOTAL_PAGES": "Gesamtzahl Seiten",
+                "CONTENT_TYPE": "Inhaltstyp"
+            },
+            "SUBMIT_BUTTON": "Absenden",
+            "SUBMIT_WITH_ISSUE_BUTTON": "Mit Problem absenden",
+            "METADATA_PANEL": {
+                "TITLE": "Metadaten",
+                "REJECT_DOCUMENT_LINK": "Dokument zurückweisen",
+                "CLEAR_ISSUE_LINK": "Problem löschen"
+            },
+            "METADATA_FIELD_VALIDATOR": {
+                "REQUIRED": "Feld ist erforderlich",
+                "INVALID_INTEGER": "Feld muss eine Zahl sein"
+            },
+            "EXTRACTION_RESULT": {
+                "EXTRACTION_ISSUE": "Extraktionsproblem",
+                "EXTRACTED_SUCCESSFULLY": "Erfolgreich extrahiert",
+                "VERIFIED": "Überprüft",
+                "NOT_VERIFIED": "Nicht überprüft"
+            },
+            "NOTIFICATIONS": {
+                "SCREEN_LOAD_ERROR": "Laden der Bildschirmdaten fehlgeschlagen",
+                "TASK_ACTION_ERROR": "Aufgabe konnte nicht gespeichert oder gesendet werden",
+                "TASK_CLAIM_ERROR": "Fehler beim Abrufen der Aufgabe",
+                "TASK_UNCLAIM_ERROR": "Fehler beim Entfernen der Aufgabe"
+            },
+            "TASK_ACTIONS": {
+                "SAVE": "Speichern",
+                "SUBMIT": "Absenden"
+            }
+        }
+    }
+}

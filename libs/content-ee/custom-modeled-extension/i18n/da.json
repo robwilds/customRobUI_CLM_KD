@@ -1,0 +1,16 @@
+{
+  "CUSTOM_MODELED_EXTENSION": {
+    "SNACKBAR": {
+      "BACKEND_SERVICE_ERROR": "Ukendt netværksfejl er opstået. Tilknyttede Process Automation-funktioner er deaktiverede.",
+      "NO_PROCESS_DEFINITION_ERROR": "Der findes ingen procesdefinition med den angivne nøgle",
+      "PROCESS_CREATED_SUCCESSFULLY": "Procesforekomsten er oprettet",
+      "FORM_SUBMITTED_SUCCESSFULLY": "Formularen er indsendt",
+      "ACTION_PERFORMED_SUCCESSFULLY": "Handling udført",
+      "CAN_NOT_ATTACH": "Ikke i stand til at vedhæfte det valgte indhold"
+    },
+    "FORM_ACTION": {
+      "CANCEL": "Annuller",
+      "SUBMIT": "Send"
+    }
+  }
+}

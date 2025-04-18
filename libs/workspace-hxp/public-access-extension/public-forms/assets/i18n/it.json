@@ -1,0 +1,18 @@
+{
+    "APP": {
+        "PUBLIC_FORM": {
+            "SUCCESS": {
+                "LOADING_FORM": "Modulo caricato correttamente",
+                "SUBMIT_FORM": "Modulo inviato correttamente",
+                "SCREEN": {
+                    "TITLE": "Grazie",
+                    "SUBTITLE": "Il modulo è stato inviato correttamente"
+                }
+            },
+            "ACTIONS": {
+                "START": "Avvia processo",
+                "CANCEL": "Annulla"
+            }
+        }
+    }
+}

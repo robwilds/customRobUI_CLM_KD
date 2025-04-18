@@ -1,0 +1,23 @@
+{
+  "SHARED_AUTHENTICATION": {
+    "DETAILS": {
+      "USERNAME": "Användarnamn",
+      "PASSWORD": "Lösenord",
+      "TOKEN": "Token",
+      "CLIENT_ID": "Klient-ID",
+      "CLIENT_SECRET": "Klienthemlighet",
+      "ENDPOINT": "Slutpunkt",
+      "SCOPE": "Definitionsområde"
+    },
+    "ERRORS": {
+      "REQUIRED": "Detta fält krävs",
+      "URL_ERROR": "Den här webbadressen är inte giltig",
+      "SCOPE_ERROR": "Endast tecken som tillåts med kommatecken separeras",
+      "INVALID_FIELD": "Fältet är ogiltigt"
+    },
+    "HINTS": {
+      "HIDE_PASSWORD": "Dölj lösenord",
+      "SCOPE_HINT": "T.ex. openId, e-post..."
+    }
+  }
+}

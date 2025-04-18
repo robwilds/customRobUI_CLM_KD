@@ -1,0 +1,16 @@
+{
+    "CUSTOM_MODELED_EXTENSION": {
+        "SNACKBAR": {
+            "BACKEND_SERVICE_ERROR": "Unbekannter Netzwerkfehler. Funktionen für Process Automation wurden deaktiviert.",
+            "NO_PROCESS_DEFINITION_ERROR": "Für den angegebenen Schlüssel gibt es keine Prozessdefinition.",
+            "PROCESS_CREATED_SUCCESSFULLY": "Prozessinstanz erfolgreich erstellt",
+            "FORM_SUBMITTED_SUCCESSFULLY": "Formular erfolgreich gesendet",
+            "ACTION_PERFORMED_SUCCESSFULLY": "Aktion erfolgreich ausgeführt",
+            "CAN_NOT_ATTACH": "Anhängen des ausgewählten Inhalts nicht möglich"
+        },
+        "FORM_ACTION": {
+            "CANCEL": "Abbrechen",
+            "SUBMIT": "Absenden"
+        }
+    }
+}

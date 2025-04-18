@@ -1,0 +1,27 @@
+{
+    "name": "shared-adf-candidates",
+    "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+    "projectType": "library",
+    "sourceRoot": "libs/shared/adf-candidates",
+    "prefix": "adf-candidates",
+    "targets": {
+        "test": {
+            "executor": "@nx/jest:jest",
+            "options": {
+                "jestConfig": "{projectRoot}/jest.config.ts",
+                "stylePreprocessorOptions": {
+                    "includePaths": ["libs/shared/core/src/styles"]
+                }
+            },
+            "configurations": {
+                "adf": {
+                    "jestConfig": "{projectRoot}/jest.adf.config.ts",
+                    "codeCoverage": false,
+                    "silent": true
+                }
+            }
+        },
+        "lint": {}
+    },
+    "tags": ["scope:shared-adf-candidates", "type:lib"]
+}

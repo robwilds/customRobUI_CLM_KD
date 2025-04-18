@@ -1,0 +1,24 @@
+{
+    "SHARED_AUTHENTICATION": {
+        "DETAILS": {
+            "USERNAME": "Nom d'utilisateur",
+            "PASSWORD": "Mot de passe",
+            "TOKEN": "Jeton",
+            "CLIENT_ID": "ID du client",
+            "CLIENT_SECRET": "Clé secrète du client",
+            "ENDPOINT": "Point de terminaison",
+            "SCOPE": "Etendue",
+            "GRANT_TYPE": "Type de subvention"
+        },
+        "ERRORS": {
+            "REQUIRED": "Ce champ est obligatoire",
+            "URL_ERROR": "Cette URL n'est pas valide",
+            "SCOPE_ERROR": "Seuls les caractères séparés par des virgules sont autorisés",
+            "INVALID_FIELD": "Le champ est invalide"
+        },
+        "HINTS": {
+            "HIDE_PASSWORD": "Masquer le mot de passe",
+            "SCOPE_HINT": "Par ex., openId, email..."
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../node_modules/@angular-devkit/architect/src/builders-schema.json",
+  "builders": {
+    "app-config-envsub": {
+        "implementation": "./src/builders/app-config-envsub",
+        "schema": "./src/builders/app-config-envsub/schema.json",
+        "description": "Envsub executor for app.config.json"
+      },
+    "docker": {
+      "implementation": "./src/builders/docker",
+      "schema": "./src/builders/docker/schema.json",
+      "description": "Build and deploy the bundle on a docker registry"
+    }
+  }
+}

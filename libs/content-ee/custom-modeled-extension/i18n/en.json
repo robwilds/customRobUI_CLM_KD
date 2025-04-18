@@ -1,0 +1,16 @@
+{
+    "CUSTOM_MODELED_EXTENSION": {
+        "SNACKBAR": {
+            "BACKEND_SERVICE_ERROR": "Unknown network error happened. Process Automation related features are disabled.",
+            "NO_PROCESS_DEFINITION_ERROR": "There is no process definition with the provided key",
+            "PROCESS_CREATED_SUCCESSFULLY": "Process instance created successfully",
+            "FORM_SUBMITTED_SUCCESSFULLY": "Form submitted successfully",
+            "ACTION_PERFORMED_SUCCESSFULLY": "Action performed successfully",
+            "CAN_NOT_ATTACH": "Not able to attach the selected content"
+        },
+        "FORM_ACTION": {
+            "CANCEL": "Cancel",
+            "SUBMIT": "Submit"
+        }
+    }
+}

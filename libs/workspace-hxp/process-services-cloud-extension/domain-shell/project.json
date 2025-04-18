@@ -1,0 +1,34 @@
+{
+    "name": "workspace-hxp-process-services-cloud-extension-domain-shell",
+    "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+    "projectType": "library",
+    "sourceRoot": "libs/workspace-hxp/process-services-cloud-extension/domain-shell/src",
+    "prefix": "alfresco-dbp",
+    "targets": {
+        "test": {
+            "executor": "@angular-devkit/build-angular:karma",
+            "options": {
+                "codeCoverage": true,
+                "main": "libs/workspace-hxp/process-services-cloud-extension/domain-shell/src/test.ts",
+                "tsConfig": "libs/workspace-hxp/process-services-cloud-extension/domain-shell/tsconfig.spec.json",
+                "karmaConfig": "libs/workspace-hxp/process-services-cloud-extension/domain-shell/karma.conf.js",
+                "stylePreprocessorOptions": {
+                    "includePaths": ["libs/shared/core/src/styles"]
+                }
+            },
+            "configurations": {
+                "adf": {
+                    "tsConfig": "libs/workspace-hxp/process-services-cloud-extension/domain-shell/tsconfig.spec.adf.json",
+                    "karmaConfig": "libs/workspace-hxp/process-services-cloud-extension/domain-shell/karma.conf.js",
+                    "progress": false,
+                    "codeCoverage": false,
+                    "stylePreprocessorOptions": {
+                        "includePaths": ["libs/shared/core/src/styles", "../alfresco-ng2-components/lib/core/src/lib"]
+                    }
+                }
+            }
+        },
+        "lint": {}
+    },
+    "tags": ["category:workspace-hxp", "scope:workspace-hxp-process-services-cloud-extension-domain-shell"]
+}

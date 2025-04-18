@@ -1,0 +1,44 @@
+{
+    "name": "shared-connectors",
+    "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+    "projectType": "library",
+    "sourceRoot": "libs/shared/connectors/src",
+    "prefix": "alfresco-dbp",
+    "targets": {
+        "build": {
+            "executor": "@nx/angular:ng-packagr-lite",
+            "outputs": ["{workspaceRoot}/dist/libs/shared-connectors"],
+            "options": {
+                "project": "libs/shared/connectors/ng-package.json"
+            },
+            "configurations": {
+                "production": {
+                    "tsConfig": "libs/shared/connectors/tsconfig.lib.prod.json"
+                },
+                "development": {
+                    "tsConfig": "libs/shared/connectors/tsconfig.lib.json"
+                },
+                "adf": {
+                    "tsConfig": "libs/shared/connectors/tsconfig.lib.adf.json"
+                }
+            },
+            "defaultConfiguration": "production"
+        },
+        "test": {
+            "executor": "@nx/jest:jest",
+            "options": {
+                "jestConfig": "{projectRoot}/jest.config.ts",
+                "passWithNoTests": false
+            },
+            "configurations": {
+                "adf": {
+                    "jestConfig": "{projectRoot}/jest.adf.config.ts",
+                    "codeCoverage": false,
+                    "silent": true
+                }
+            }
+        },
+        "lint": {}
+    },
+    "tags": ["scope:shared-connectors", "category:shared-connectors", "category:shared-unit"]
+}

@@ -1,0 +1,143 @@
+@use '@angular/material' as mat;
+
+@mixin viewer-theme($theme, $typography) {
+    $viewer-background-color: var(--theme-studio-background) !default;
+    $viewer-highlight-color: #0e73d8 !default;
+    $viewer-highlight-color-light: #e2eefa !default;
+    $viewer-highlight-background-color: #e2eefa !default;
+    $viewer-loader-spinner-color: var(--theme-ama-loader-spinner) !default;
+    $viewer-grid-image-background-color: #e2eefa !default;
+    $viewer-image-background-color: rgb(238, 238, 238) !default;
+    $viewer-disabled-color: var(--theme-disabled-color) !default;
+    $viewer-text-color: var(--theme-text-color) !default;
+    $viewer-border-color: #d1d5db !default;
+    $viewer-toolbar-background-color: white !default;
+
+    $viewer-text-layer-color-rubber-band: #7de6fc !default;
+    $viewer-text-layer-background-color-rubber-band: #000000 !default;
+    $viewer-text-layer-opacity-rubber-band: 0.3 !default;
+    $viewer-text-layer-color-valid: #04a003 !default;
+    $viewer-text-layer-background-color-valid: #04a003 !default;
+    $viewer-text-layer-opacity-valid: 0.5 !default;
+    $viewer-text-layer-color-invalid: #f83d30 !default;
+    $viewer-text-layer-background-color-invalid: #f83d30 !default;
+    $viewer-text-layer-opacity-invalid: 0.5 !default;
+    $viewer-text-layer-color-primary: #ff6f00 !default;
+    $viewer-text-layer-background-color-primary: #ff6f00 !default;
+    $viewer-text-layer-opacity-primary: 0.5 !default;
+    $viewer-text-layer-color-default: yellow !default;
+    $viewer-text-layer-background-color-default: yellow !default;
+    $viewer-text-layer-opacity-default: 0.5 !default;
+
+    $font-family: mat.font-family($typography) !default;
+
+    hyland-idp-viewer-grid-view,
+    .idp-viewer-container {
+        background-color: $viewer-image-background-color;
+    }
+
+    .idp-grid-view {
+        background-color: $viewer-image-background-color;
+        &__image-container {
+            background-color: $viewer-grid-image-background-color;
+            border-color: $viewer-highlight-color;
+
+            .idp-image-overlay {
+                &__doc-label {
+                    color: $viewer-highlight-color;
+                    background-color: $viewer-grid-image-background-color;
+                    border: 3px solid $viewer-highlight-color;
+                }
+            }
+        }
+    }
+
+    .idp-viewer-toolbar {
+        border: 1px solid $viewer-border-color;
+        background-color: $viewer-toolbar-background-color;
+
+        .idp-zoom-container {
+            .idp-zoom-input {
+                border-bottom: 2px solid $viewer-border-color;
+                font-family: $font-family;
+
+                &.idp-disabled {
+                    color: $viewer-disabled-color;
+                }
+
+                input {
+                    color: $viewer-text-color;
+                }
+            }
+        }
+
+        .idp-page-nav-container {
+            .idp-page-nav-input {
+                border-bottom: 2px solid $viewer-border-color;
+
+                > * {
+                    font-family: $font-family;
+                }
+
+                &.idp-disabled {
+                    color: $viewer-disabled-color;
+                }
+
+                input {
+                    color: $viewer-text-color;
+                }
+            }
+        }
+    }
+
+    .idp-selected {
+        background-color: $viewer-highlight-color-light !important;
+    }
+
+    .idp-viewer-text-only-layer {
+        &__container-div {
+            background-color: $viewer-toolbar-background-color;
+        }
+    }
+
+    .idp-viewer-text-layer {
+        &__container-canvas {
+            --idp-viewer-text-layer-color-rubber-band: #{$viewer-text-layer-color-rubber-band};
+            --idp-viewer-text-layer-background-color-rubber-band: #{$viewer-text-layer-background-color-rubber-band};
+            --idp-viewer-text-layer-opacity-rubber-band: #{$viewer-text-layer-opacity-rubber-band};
+            --idp-viewer-text-layer-color-valid: #{$viewer-text-layer-color-valid};
+            --idp-viewer-text-layer-background-color-valid: #{$viewer-text-layer-background-color-valid};
+            --idp-viewer-text-layer-opacity-valid: #{$viewer-text-layer-opacity-valid};
+            --idp-viewer-text-layer-color-invalid: #{$viewer-text-layer-color-invalid};
+            --idp-viewer-text-layer-background-color-invalid: #{$viewer-text-layer-background-color-invalid};
+            --idp-viewer-text-layer-opacity-invalid: #{$viewer-text-layer-opacity-invalid};
+            --idp-viewer-text-layer-color-primary: #{$viewer-text-layer-color-primary};
+            --idp-viewer-text-layer-background-color-primary: #{$viewer-text-layer-background-color-primary};
+            --idp-viewer-text-layer-opacity-primary: #{$viewer-text-layer-opacity-primary};
+            --idp-viewer-text-layer-color-default: #{$viewer-text-layer-color-default};
+            --idp-viewer-text-layer-background-color-default: #{$viewer-text-layer-background-color-default};
+            --idp-viewer-text-layer-opacity-default: #{$viewer-text-layer-opacity-default};
+        }
+
+        &__text-tooltip {
+            background-color: $viewer-highlight-background-color;
+            border: 1px solid $viewer-highlight-color;
+        }
+    }
+
+    .idp-thumbnail-viewer {
+        border-right: 1px solid $viewer-border-color;
+        border-top: 1px solid $viewer-border-color;
+        background-color: $viewer-toolbar-background-color;
+
+        &__header {
+            font: 400 25px / 23px $font-family;
+        }
+
+        &__list-item {
+            img {
+                border: 1px solid $viewer-border-color;
+            }
+        }
+    }
+}

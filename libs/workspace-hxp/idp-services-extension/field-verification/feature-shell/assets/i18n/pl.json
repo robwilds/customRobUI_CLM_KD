@@ -1,0 +1,45 @@
+{
+    "EXTRACTION": {
+        "VERIFICATION": {
+            "TASK_HEADER": {
+                "TITLE": "Przejrzyj wartości pól wyodrębnione z dokumentu",
+                "REMAINING_ISSUES": "problemy do rozwiązania",
+                "ALL_RESOLVED": "Wszystkie rozwiązane",
+                "BACK_LABEL": "Powrót do zadań",
+                "TASK_NAME": "Nazwa zadania",
+                "TASK_NAME_VALUE": "Weryfikacja dokumentu",
+                "DOCUMENT_CLASSES": "Klasy dokumentów",
+                "TOTAL_DOCUMENTS": "Łączna liczba dokumentów",
+                "TOTAL_PAGES": "Łączna liczba stron",
+                "CONTENT_TYPE": "Typ zawartości"
+            },
+            "SUBMIT_BUTTON": "Prześlij",
+            "SUBMIT_WITH_ISSUE_BUTTON": "Prześlij z problemem",
+            "METADATA_PANEL": {
+                "TITLE": "Metadane",
+                "REJECT_DOCUMENT_LINK": "Odrzuć dokument",
+                "CLEAR_ISSUE_LINK": "Wyczyść problem"
+            },
+            "METADATA_FIELD_VALIDATOR": {
+                "REQUIRED": "Pole jest wymagane",
+                "INVALID_INTEGER": "Pole musi być liczbą"
+            },
+            "EXTRACTION_RESULT": {
+                "EXTRACTION_ISSUE": "Problem podczas ekstrakcji",
+                "EXTRACTED_SUCCESSFULLY": "Ekstrakcja przebiegła pomyślnie",
+                "VERIFIED": "Zweryfikowano",
+                "NOT_VERIFIED": "Nie zweryfikowano"
+            },
+            "NOTIFICATIONS": {
+                "SCREEN_LOAD_ERROR": "Nie udało się załadować danych ekranu",
+                "TASK_ACTION_ERROR": "Nie udało się zapisać lub przesłać zadania",
+                "TASK_CLAIM_ERROR": "Nie udało się przejąć zadania",
+                "TASK_UNCLAIM_ERROR": "Nie udało się cofnąć przejęcia zadania"
+            },
+            "TASK_ACTIONS": {
+                "SAVE": "Zapisz",
+                "SUBMIT": "Prześlij"
+            }
+        }
+    }
+}

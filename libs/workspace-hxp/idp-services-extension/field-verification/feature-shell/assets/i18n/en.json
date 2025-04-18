@@ -1,0 +1,45 @@
+{
+    "EXTRACTION": {
+        "VERIFICATION": {
+            "TASK_HEADER": {
+                "TITLE": "Review field values extracted from the document",
+                "REMAINING_ISSUES": "issues to resolve",
+                "ALL_RESOLVED": "All resolved",
+                "BACK_LABEL": "Back to Tasks",
+                "TASK_NAME": "Task name",
+                "TASK_NAME_VALUE": "Document Verification",
+                "DOCUMENT_CLASSES": "Document classes",
+                "TOTAL_DOCUMENTS": "Total documents",
+                "TOTAL_PAGES": "Total pages",
+                "CONTENT_TYPE": "Content type"
+            },
+            "SUBMIT_BUTTON": "Submit",
+            "SUBMIT_WITH_ISSUE_BUTTON": "Submit with Issue",
+            "METADATA_PANEL": {
+                "TITLE": "Metadata",
+                "REJECT_DOCUMENT_LINK": "Reject Document",
+                "CLEAR_ISSUE_LINK": "Clear issue"
+            },
+            "METADATA_FIELD_VALIDATOR": {
+                "REQUIRED": "Field is required",
+                "INVALID_INTEGER": "Field must be a number"
+            },
+            "EXTRACTION_RESULT": {
+                "EXTRACTION_ISSUE": "Extraction issue",
+                "EXTRACTED_SUCCESSFULLY": "Extracted successfully",
+                "VERIFIED": "Verified",
+                "NOT_VERIFIED": "Not verified"
+            },
+            "NOTIFICATIONS": {
+                "SCREEN_LOAD_ERROR": "Failed to load the screen data",
+                "TASK_ACTION_ERROR": "Failed to Save or Submit Task",
+                "TASK_CLAIM_ERROR": "Failed to Claim Task",
+                "TASK_UNCLAIM_ERROR": "Failed to Unclaim Task"
+            },
+            "TASK_ACTIONS": {
+                "SAVE": "Save",
+                "SUBMIT": "Submit"
+            }
+        }
+    }
+}

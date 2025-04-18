@@ -1,0 +1,23 @@
+{
+  "SHARED_AUTHENTICATION": {
+    "DETAILS": {
+      "USERNAME": "اسم المستخدم",
+      "PASSWORD": "كلمة سر",
+      "TOKEN": "رمز مميز",
+      "CLIENT_ID": "معرف العميل",
+      "CLIENT_SECRET": "سر العميل",
+      "ENDPOINT": "نقطة النهاية",
+      "SCOPE": "نطاق"
+    },
+    "ERRORS": {
+      "REQUIRED": "هذا الحقل مطلوب",
+      "URL_ERROR": "عنوان url هذا غير صالح",
+      "SCOPE_ERROR": "يسمح فقط بالأحرف مع فاصل الفاصلة",
+      "INVALID_FIELD": "الحقل غير صالح"
+    },
+    "HINTS": {
+      "HIDE_PASSWORD": "إخفاء كلمة المرور",
+      "SCOPE_HINT": "على سبيل المثال فتح المعرف، بريد إلكتروني ..."
+    }
+  }
+}

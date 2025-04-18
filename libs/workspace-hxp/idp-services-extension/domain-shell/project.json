@@ -1,0 +1,47 @@
+{
+  "name": "workspace-hxp-idp-services-extension-domain-shell",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/workspace-hxp/idp-services-extension/domain-shell/src",
+  "prefix": "hxp",
+  "tags": [
+    "scope:workspace-hxp-idp-services-extension-domain-shell",
+    "category:workspace-hxp"
+  ],
+  "projectType": "library",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "codeCoverage": true,
+        "main": "libs/workspace-hxp/idp-services-extension/domain-shell/src/test.ts",
+        "tsConfig": "libs/workspace-hxp/idp-services-extension/domain-shell/tsconfig.spec.json",
+        "karmaConfig": "libs/workspace-hxp/idp-services-extension/domain-shell/karma.conf.js",
+        "stylePreprocessorOptions": {
+          "includePaths": [
+            "libs/shared/core/src/styles",
+            "apps/workspace-hxp/src/styles",
+            "apps/workspace-hxp/src/styles/idp-styles"
+          ]
+        }
+      },
+      "configurations": {
+        "adf": {
+          "tsConfig": "libs/workspace-hxp/idp-services-extension/domain-shell/tsconfig.spec.adf.json",
+          "karmaConfig": "libs/workspace-hxp/idp-services-extension/domain-shell/karma.conf.js",
+          "progress": false,
+          "codeCoverage": false,
+          "stylePreprocessorOptions": {
+            "includePaths": [
+              "libs/shared/core/src/styles",
+              "../alfresco-ng2-components/lib/core/src/lib",
+              "apps/workspace-hxp/src/styles",
+              "apps/workspace-hxp/src/styles/idp-styles"
+            ]
+          }
+        }
+      }
+    },
+    "lint": {},
+    "stylelint": {}
+  }
+}

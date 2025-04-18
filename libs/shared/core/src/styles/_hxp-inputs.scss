@@ -1,0 +1,43 @@
+@use '@hylandsoftware/design-tokens/scss' as *;
+
+@mixin hxp-input-variables {
+    $defaults: (
+        --hxp-input-text-field-focus-outline-width: $hy-border-width-30,
+        --hxp-input-text-field-focus-outline-color: $hy-colors-border-active,
+        --hxp-input-text-field-outline-width: $hy-border-width-20,
+        --hxp-input-text-field-outline-color: $hy-colors-border-default,
+        --hxp-input-text-field-input-text-color: $hy-colors-text-default,
+        --hxp-input-text-field-label-color: $hy-colors-text-secondary,
+    );
+    :root {
+        @each $name, $value in $defaults {
+            #{$name}: #{$value};
+        }
+    }
+}
+
+@include hxp-input-variables;
+.hxp-input {
+    --mdc-outlined-text-field-focus-outline-width: var(--hxp-input-text-field-focus-outline-width);
+    --mdc-outlined-text-field-focus-outline-color: var(--hxp-input-text-field-focus-outline-color);
+    --mdc-outlined-text-field-outline-width: var(--hxp-input-text-field-outline-width);
+    --mdc-outlined-text-field-outline-color: var(--hxp-input-text-field-outline-color);
+    --mdc-outlined-text-field-input-text-color: var(--hxp-input-text-field-input-text-color);
+
+    input:not(:disabled) {
+        font-family: $hy-font-families-open-sans;
+        font-size: $hy-font-sizes-20;
+        font-style: normal;
+        font-weight: $hy-font-weights-regular;
+        line-height: $hy-line-heights-40;
+    }
+
+    mat-label {
+        color: var(--hxp-input-text-field-label-color);
+        font-family: $hy-font-families-open-sans;
+        font-size: $hy-font-sizes-10;
+        font-style: normal;
+        font-weight: $hy-font-weights-regular;
+        line-height: $hy-line-heights-50;
+    }
+}

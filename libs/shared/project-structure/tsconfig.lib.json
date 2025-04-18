@@ -1,0 +1,13 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "outDir": "../../../dist/shared/project-structure",
+        "declaration": true,
+        "declarationMap": true,
+        "inlineSources": true,
+        "types": [],
+        "composite": true,
+        "rootDir": "../../..",
+    },
+    "include": ["**/*.ts"]
+}

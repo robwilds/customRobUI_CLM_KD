@@ -1,0 +1,25 @@
+@use 'mat-selectors' as ms;
+@use '@hylandsoftware/design-tokens/scss' as *;
+
+body {
+    #{ms.$mdc-dialog__actions} {
+        padding: $hy-spacing-0 $hy-spacing-24 $hy-spacing-24 $hy-spacing-24;
+    }
+
+    #{ms.$mat-mdc-dialog-container} #{ms.$mat-dialog-title} {
+        color: var(--theme-foreground-text-bold-color);
+        font-family: $hy-font-families-open-sans;
+        line-height: $hy-line-heights-20;
+        font-size: $hy-font-sizes-40;
+        font-weight: $hy-font-weights-regular;
+        padding: $hy-spacing-24;
+    }
+
+    #{ms.$mat-mdc-dialog-container} {
+        box-shadow: var(--theme-ama-dialog-box-shadow);
+    }
+
+    #{ms.$mat-mdc-dialog-container} #{ms.$mat-mdc-dialog__surface} {
+        border-radius: $hy-border-radius-12;
+    }
+}

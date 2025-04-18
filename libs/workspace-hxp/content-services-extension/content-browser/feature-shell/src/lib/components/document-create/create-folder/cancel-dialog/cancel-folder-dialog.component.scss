@@ -1,0 +1,38 @@
+@use 'mat-selectors' as ms;
+@use '@hylandsoftware/design-tokens/scss' as *;
+
+.dialog-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 0;
+}
+
+#{ms.$mat-dialog-title} {
+    margin: 0;
+}
+
+#{ms.$mat-dialog-content} {
+    font-size: $hy-font-sizes-20;
+}
+
+#{ms.$mat-dialog-actions} {
+    justify-content: flex-end;
+}
+
+#{ms.$mat-dialog-actions} button {
+    cursor: pointer;
+}
+
+.hxp-dialog-reject-button {
+    color: $hy-colors-blue-600;
+}
+
+.hxp-dialog-confirm-button {
+    color: $hy-colors-origin-white;
+    background-color: $hy-colors-blue-600;
+}
+
+#{ms.$mat-button-focus-overlay} {
+    background-color: transparent;
+}

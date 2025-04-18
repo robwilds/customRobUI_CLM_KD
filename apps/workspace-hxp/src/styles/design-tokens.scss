@@ -1,0 +1,15 @@
+@use '@hylandsoftware/design-tokens/scss' as *;
+
+/* icon button */
+$studio-icon-button-default-color: $hy-colors-icon-default;
+$studio-icon-button-default-border-radius: $hy-border-radius-100;
+$studio-icon-button-hover-color: $hy-colors-icon-default;
+$studio-icon-button-pressed-color: $hy-colors-icon-default;
+$studio-icon-button-disabled-color: $hy-colors-icon-disabled;
+
+/* filter chip */
+$studio-filter-chip-background-color: $hy-colors-neutral-100;
+$studio-filter-chip-text-color: $hy-colors-neutral-700;
+
+/* filter menu */
+$studio-filter-menu-box-shadow: '0 2px 4px rgba(0, 0, 0, 0.14), 0 4px 5px rgba(0, 0, 0, 0.12), 0 1px 10px rgba(0, 0, 0, 0.2)';

@@ -1,0 +1,21 @@
+<adf-layout-header
+    [title]="(title$ | async) ?? ''"
+    [color]="(backgroundColor$ | async) ?? ''"
+    [backgroundImage]="(backgroundImage$ | async) ?? ''"
+    [redirectUrl]="landingPage"
+    [expandedSidenav]="expandedSidenav"
+    [class.hxp-custom-header-color]="(headerTextColor$ | async) ?? ''"
+    [showSidenavToggle]="showSidenavToggle"
+    [showLogo]="false"
+    (clicked)="toggleMenu()"
+>
+    <div class="adf-toolbar--spacer adf-toolbar-divider"></div>
+
+    <div class="hxp-header-logo">
+        <img [src]="(logoPath$ | async) ?? ''" alt="Hyland logo">
+    </div>
+    <hxp-app-user-info [showName]="false"></hxp-app-user-info>
+
+    <hxp-more-menu></hxp-more-menu>
+</adf-layout-header>
+<mat-divider></mat-divider>

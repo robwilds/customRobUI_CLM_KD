@@ -1,0 +1,12 @@
+{
+    "extends": "./tsconfig.json",
+    "angularCompilerOptions": {
+        "skipTemplateCodegen": true,
+        "strictMetadataEmit": true,
+        "fullTemplateTypeCheck": true,
+        "strictInjectionParameters": true,
+        "enableResourceInlining": true
+    },
+    "include": ["**/*.ts"],
+    "exclude": ["**/*.spec.ts", "**/*.test.ts", "jest.config.ts"]
+}

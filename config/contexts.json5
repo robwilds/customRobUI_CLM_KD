@@ -1,0 +1,15 @@
+{
+  _customApp: {
+    __name: "Custom App",
+    scope: "openid profile environment_authorization offline_access groups profile.attributes",
+    deployedApps: [
+      {
+        name: "clm-mvp-v1-alpha-1-27c03eb0",
+      },
+    ],
+    studioClientId: "hxps:clm-mvp-v1-alpha-1-27c03eb0:clients:4e3c7ecc-c270-4dcd-affd-9f7a6a0a414c:env:27c03eb0",
+    contentHost: "https://hx-automate-xi-dev-5ea8fcea48d7417fbf3d7a26ea909f9e.content.experience.hyland.com",
+    processHost: "https://247ac3d3-dbb9-4203-a54f-8c0bc42bf798.studio.experience.hyland.com",
+    idpURL: "https://auth.iam.experience.hyland.com/idp",
+  },
+}

@@ -1,0 +1,24 @@
+{
+    "SHARED_AUTHENTICATION": {
+        "DETAILS": {
+            "USERNAME": "Nombre de usuario",
+            "PASSWORD": "Contraseña",
+            "TOKEN": "Ficha",
+            "CLIENT_ID": "ID del cliente",
+            "CLIENT_SECRET": "Secreto de cliente",
+            "ENDPOINT": "Destino",
+            "SCOPE": "Ámbito",
+            "GRANT_TYPE": "Tipo de concesión"
+        },
+        "ERRORS": {
+            "REQUIRED": "Este campo es obligatorio",
+            "URL_ERROR": "Esta URL no es válida",
+            "SCOPE_ERROR": "Solo se permiten caracteres separados por comas",
+            "INVALID_FIELD": "Campo no es válido"
+        },
+        "HINTS": {
+            "HIDE_PASSWORD": "Ocultar contraseña",
+            "SCOPE_HINT": "Por ej: openId,email..."
+        }
+    }
+}

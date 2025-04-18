@@ -1,0 +1,74 @@
+@use '@angular/material' as mat;
+@use './typography';
+@import './colors';
+@import './custom-material-colors';
+
+$primary: mat.define-palette($hy-primary, 700);
+$accent: mat.define-palette($hy-neutral, 600);
+$warn: mat.define-palette($hy-warn, 600);
+$theme: mat.define-light-theme(
+    (
+        color: (
+            primary: $primary,
+            accent: $accent,
+            warn: $warn,
+        ),
+        typography: typography.$typography-config,
+    )
+);
+
+$hy-primary-contrast: mat.get-color-from-palette($primary, 'contrast');
+$foreground: map-get($theme, foreground);
+$background: map-get($theme, background);
+
+$color: map-get($theme, color);
+$foreground-values: (
+    base: mat.get-color-from-palette($hy-primary, 600),
+    disabled: mat.get-color-from-palette($hy-neutral, 500),
+    disabled-button: mat.get-color-from-palette($hy-neutral, 500),
+    disabled-text: mat.get-color-from-palette($hy-neutral, 500),
+    secondary-text: mat.get-color-from-palette($hy-neutral, 600),
+    icon: mat.get-color-from-palette($hy-neutral, 900),
+    icons: mat.get-color-from-palette($hy-neutral, 900),
+    text: mat.get-color-from-palette($hy-primary-contrast, 500),
+    hint-text: mat.get-color-from-palette($hy-neutral, 500),
+);
+
+$background-values: (
+    hover: map-get($hy-neutral, 100),
+);
+
+$custom-foreground-and-background: (
+    foreground: map-merge($foreground, $foreground-values),
+    background: map-merge($background, $background-values),
+);
+
+$custom-color: (
+    color: map-merge($color, $custom-foreground-and-background),
+);
+
+$theme: map-merge($theme, $custom-foreground-and-background);
+$theme: map-merge($theme, $custom-color);
+$theme: add-custom-success-snackbar-color-to-theme($theme, $hy-green, 700);
+
+$dark-primary: mat.define-palette($hy-primary);
+$dark-accent: mat.define-palette($hy-neutral);
+$dark-warn: mat.define-palette($hy-warn);
+$dark-theme: mat.define-dark-theme(
+    (
+        color: (
+            primary: $dark-primary,
+            accent: $dark-accent,
+            warn: $dark-warn,
+        ),
+        typography: typography.$typography-config,
+    )
+);
+
+@include typography.typography(typography.$typography-config);
+
+@include mat.all-component-typographies();
+@include mat.core();
+@include mat.all-component-themes($theme);
+@include adf-core-theme($theme);
+@include adf-breadcrumb-theme($theme);

@@ -1,0 +1,23 @@
+@use 'mat-selectors' as ms;
+@use '@hylandsoftware/design-tokens/scss' as *;
+
+$beta-chip-color: #7b61ff;
+
+.hxp-beta-chip {
+    color: $beta-chip-color;
+    border: 1px solid $beta-chip-color;
+    background-color: $hy-colors-background-base !important;
+    border-radius: $hy-border-radius-4;
+    height: $hy-line-heights-40;
+}
+
+.hxp-beta-chip-label {
+    font: $hy-body-semi-bold-tag-font;
+    color: $beta-chip-color;
+}
+
+::ng-deep .hxp-beta-chip {
+    #{ms.$mat-mdc-evolution-chip__action--primary} {
+        padding: 0 5px !important; /* needed to override Material padding */
+    }
+}

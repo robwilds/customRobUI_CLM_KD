@@ -1,0 +1,30 @@
+<div class="hxp-sidenav-panel" [ngSwitch]="data?.mode">
+
+      <mat-list *ngFor="
+        let group of (navbarMenuItemGroups$ | async);
+        trackBy: trackByGroupId"
+        class="hxp-sidenav-panel-list">
+        <ng-container *ngSwitchCase="'expanded'">
+          <mat-list-item *ngFor="let item of group.items; trackBy: trackByLinkId"
+            class="hxp-sidenav-panel-item">
+            <ng-container *ngIf="item.component">
+              <adf-dynamic-component
+                [data]="{ item: item, state: 'expanded' }"
+                [id]="item.component" />
+            </ng-container>
+          </mat-list-item>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'collapsed'">
+          <div class="hxp-sidenav-panel-collapsed" *ngFor="let item of group.items; trackBy: trackByLinkId">
+            <ng-container *ngIf="item.component">
+              <adf-dynamic-component
+                [data]="{ item: item, state: 'collapsed' }"
+                [id]="item.component"
+              />
+            </ng-container>
+          </div>
+        </ng-container>
+      </mat-list>
+
+</div>

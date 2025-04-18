@@ -1,0 +1,26 @@
+@use '@hylandsoftware/design-tokens/scss' as *;
+
+.hxp-search-menu-item {
+    border-left: 6px solid transparent;
+
+    &_active {
+        background-color: $hy-colors-background-nav;
+        border-left: 6px solid $hy-colors-background-primary;
+    }
+
+    &_button {
+        justify-content: left;
+        width: 100%;
+        height: $hy-line-heights-10;
+
+        &_collapsed {
+            justify-content: center;
+        }
+    }
+
+    &_title {
+        font-family: $hy-font-families-open-sans;
+        font-size: 16px;
+        font-weight: $hy-font-weights-regular;
+    }
+}

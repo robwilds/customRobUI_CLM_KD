@@ -1,0 +1,21 @@
+.studio-confirmation-dialog-title {
+    color: var(--studio-dialog-modal-title-color);
+    font: var(--studio-dialog-modal-title-font);
+    letter-spacing: var(--studio-dialog-modal-title-letter-spacing);
+    line-height: var(--studio-dialog-modal-title-line-heigh);
+    text-transform: var(--studio-dialog-modal-title-text-transform);
+    text-decoration: var(--studio-dialog-modal-title-text-decoration);
+}
+
+.studio-confirmation-dialog-content {
+    p,
+    span,
+    ul,
+    li {
+        color: var(--studio-dialog-modal-text-color);
+        font: var(--studio-dialog-modal-text-font);
+        letter-spacing: var(--studio-dialog-modal-text-letter-spacing);
+        text-transform: var(--studio-dialog-modal-text-text-transform);
+        text-decoration: var(--studio-dialog-modal-text-text-decoration);
+    }
+}
